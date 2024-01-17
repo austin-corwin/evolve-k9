@@ -1,6 +1,6 @@
 // import componentConfig from "./components/componentConfig";
 
-import { extendTheme, ThemeConfig } from "@chakra-ui/react";
+import { extendBaseTheme, extendTheme, ThemeConfig } from "@chakra-ui/react";
 
 import { tailwindConstants as tailwind } from "./tailwind.constants";
 
@@ -13,6 +13,19 @@ const theme: ThemeConfig = extendTheme({
   colors: {
     ...tailwind.theme.extend.colors,
     ...tailwind.theme.colors,
+    primary: {
+      main: "#7bb9e8",
+      50: "#e3f2fd",
+      100: "#bbdefb",
+      200: "#90caf9",
+      300: "#64b5f6",
+      400: "#42a5f5",
+      500: "#2196f3",
+      600: "#1e88e5",
+      700: "#1976d2",
+      800: "#1565c0",
+      900: "#0d47a1"
+    },
     mono: {
       "50": "#000",
       "100": "#000",
@@ -36,5 +49,6 @@ const theme: ThemeConfig = extendTheme({
     "3xl": "106em",
   },
 });
+
 
 export default theme;

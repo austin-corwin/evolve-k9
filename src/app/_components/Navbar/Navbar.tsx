@@ -9,7 +9,7 @@ const Navbar: React.FC = () => {
 
   return (
     <NavbarContainer>
-      <Logo w="100px" color={"gray"} />
+      <Logo w="100px" color={"white"} />
       <MenuToggle toggle={toggle} isOpen={isOpen} />
       <MenuLinks isOpen={isOpen} />
     </NavbarContainer>

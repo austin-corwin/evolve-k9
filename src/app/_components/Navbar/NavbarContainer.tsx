@@ -14,10 +14,8 @@ const NavbarContainer: React.FC<INavbarContainerProps> = ({ children }) => {
       w="100%"
       mb={8}
       p={8}
-      bg={["green"]}
-      //   bg={["primary.500", "primary.500", "transparent", "transparent"]}
-      //   color={["white", "white", "primary.700", "primary.700"]}
-      color={["white", "white"]}
+      bg={["primary.400"]}
+      color={["white"]}
     >
       {children}
     </Flex>
