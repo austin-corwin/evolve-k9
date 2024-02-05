@@ -19,7 +19,7 @@ const Hero: React.FC<IHero> = ({ title, subtitle, action = null }) => {
                 bgSize='cover'
                 position='relative'
                 w='full'
-                h='90vh'
+                h={{ base: '60vh', xl: '80vh' }}
                 alignItems='start'
                 justifyContent='start'
                 flexDirection='column'
@@ -94,16 +94,6 @@ const Hero: React.FC<IHero> = ({ title, subtitle, action = null }) => {
                 style={{ objectFit: 'cover' }}
             /> */}
             </Flex>
-            <Heading
-                as='h1'
-                fontSize='6xl'
-                border='1px'
-                borderColor='gray.200'
-                fontFamily='hind'
-                color='primary.300'
-            >
-                Hero section goes here
-            </Heading>
         </Box>
     )
 }

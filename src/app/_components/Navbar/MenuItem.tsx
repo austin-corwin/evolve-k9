@@ -8,7 +8,7 @@ interface IMenuItemProps {
 
 const MenuItem: React.FC<IMenuItemProps> = ({ children, to = '/' }) => {
     return (
-        <Link fontWeight='bold' color='brandGreen.300' href={to}>
+        <Link fontWeight='bold' _hover={{ color: 'brandGreen.300' }} color='dark' href={to}>
             <Text>{children}</Text>
         </Link>
     )

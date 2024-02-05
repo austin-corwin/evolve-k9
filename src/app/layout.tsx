@@ -4,6 +4,7 @@ import './globals.css'
 import * as React from 'react'
 import { Providers } from './providers'
 import { fonts } from '@/app/_config/fonts'
+import { Navbar } from './_components/Navbar'
 
 export const metadata: Metadata = {
     title: 'Create Next App',
@@ -17,7 +18,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             {/* <html lang='en'> */}
             <body>
                 <main className='flex min-h-screen flex-col items-center justify-between'>
-                    <Providers>{children}</Providers>
+                    <Providers>
+                        <Navbar />
+                        {children}
+                    </Providers>
                 </main>
             </body>
         </html>
