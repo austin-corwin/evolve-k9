@@ -9,6 +9,7 @@ const About: React.FC<IAbout> = () => {
         <Stack gap={16} w='full' flexDirection={{ base: 'column', lg: 'row' }}>
             <VStack gap={4} justifyContent='start' alignItems='start'>
                 <Heading
+                    id='about'
                     // fontSize={{ base: 'md', lg: '3xl', xl: '4xl' }}
                     fontSize={{ base: 'md', lg: '6xl', xl: '7xl' }}
                     fontFamily='mont'
