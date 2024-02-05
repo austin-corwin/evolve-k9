@@ -1,24 +1,24 @@
-import { Flex } from "@chakra-ui/react";
+import { Flex } from '@chakra-ui/react'
 
 interface INavbarContainerProps {
-  children: React.ReactNode;
+    children: React.ReactNode
 }
 
 const NavbarContainer: React.FC<INavbarContainerProps> = ({ children }) => {
-  return (
-    <Flex
-      as="nav"
-      align="center"
-      justify="space-between"
-      wrap="wrap"
-      w="100%"
-      mb={8}
-      p={8}
-      bg={["primary.400"]}
-      color={["white"]}
-    >
-      {children}
-    </Flex>
-  );
-};
-export default NavbarContainer;
+    return (
+        <Flex
+            as='nav'
+            align='center'
+            justify='space-between'
+            wrap='wrap'
+            w='100%'
+            // mb={8}
+            p={8}
+            bg={['brandTan.300']}
+            color={['white']}
+        >
+            {children}
+        </Flex>
+    )
+}
+export default NavbarContainer
