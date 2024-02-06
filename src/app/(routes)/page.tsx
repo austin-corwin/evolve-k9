@@ -5,7 +5,7 @@ import Hero from '../_features/hero/Hero'
 import About from '../_features/about/About'
 const Home = () => {
     return (
-        <Box bg='brandTan.200'>
+        <Box bg='brandTan.100'>
             <Hero
                 title='Where training meets transformation'
                 subtitle='evolve K9'
@@ -14,7 +14,7 @@ const Home = () => {
             <Container
                 display='flex'
                 maxW={{ base: 340, md: 800, lg: 800, xl: 1280 }}
-                bg='brandTan.200'
+                bg='brandTan.100'
                 mt={{ base: 16, lg: 24 }}
             >
                 <VStack gap={24}>
