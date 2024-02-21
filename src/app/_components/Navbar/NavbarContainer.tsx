@@ -13,8 +13,9 @@ const NavbarContainer: React.FC<INavbarContainerProps> = ({ children }) => {
             wrap='wrap'
             w='100%'
             // mb={8}
-            p={8}
-            bg={['brandTan.200']}
+            p={3}
+            pr={9}
+            bg={['brandTan.100']}
             color={['white']}
         >
             {children}

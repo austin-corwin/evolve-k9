@@ -1,19 +1,19 @@
-import React from "react";
-import { Logo, MenuToggle, NavbarContainer } from ".";
-import MenuLinks from "./MenuLinks";
+import React from 'react'
+import { Logo, MenuToggle, NavbarContainer } from '.'
+import MenuLinks from './MenuLinks'
 
 const Navbar: React.FC = () => {
-  const [isOpen, setIsOpen] = React.useState(false);
+    const [isOpen, setIsOpen] = React.useState(false)
 
-  const toggle = () => setIsOpen(!isOpen);
+    const toggle = () => setIsOpen(!isOpen)
 
-  return (
-    <NavbarContainer>
-      <Logo w="100px" color={"white"} />
-      <MenuToggle toggle={toggle} isOpen={isOpen} />
-      <MenuLinks isOpen={isOpen} />
-    </NavbarContainer>
-  );
-};
+    return (
+        <NavbarContainer>
+            <Logo color={'white'} />
+            <MenuToggle toggle={toggle} isOpen={isOpen} />
+            <MenuLinks isOpen={isOpen} />
+        </NavbarContainer>
+    )
+}
 
-export default Navbar;
+export default Navbar
