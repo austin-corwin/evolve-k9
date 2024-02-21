@@ -14,7 +14,7 @@ const Home = () => {
             />
             <Container
                 display='flex'
-                maxW={{ base: 340, md: 800, lg: 800, xl: 1280 }}
+                maxW={{ base: 340, md: 1000, lg: 1000, xl: 1280 }}
                 bg='brandTan.100'
                 mt={{ base: 16, lg: 24 }}
             >
