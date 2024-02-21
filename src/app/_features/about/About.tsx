@@ -2,9 +2,11 @@ import { Box, Button, Heading, Stack, Text, VStack } from '@chakra-ui/react'
 import Image from 'next/image'
 import React from 'react'
 
-interface IAbout {}
+interface IAbout {
+    body: string
+}
 
-const About: React.FC<IAbout> = () => {
+const About: React.FC<IAbout> = ({ body }) => {
     return (
         <Stack gap={16} w='full' flexDirection={{ base: 'column', lg: 'row' }}>
             <VStack gap={4} justifyContent='start' alignItems='start'>
@@ -22,14 +24,7 @@ const About: React.FC<IAbout> = () => {
                         </Text>{' '}
                     </Box>
                 </Heading>
-                <Text fontWeight={'medium'}>
-                    Pupper porgo such treat the neighborhood pupper, boof mlem. Pupperino very
-                    jealous pupper vvv shibe heckin good boys smol borking doggo with a long snoot
-                    for pats, puggo you are doing me a frighten very jealous pupper. Smol borking
-                    doggo with a long snoot for pats fluffer heckin good boys and girls shooberino
-                    most angery pupper I have ever seen puggo doggo, pats doggorino puggorino super
-                    chub.
-                </Text>
+                <Text fontWeight={'medium'}>{body}</Text>
                 <Button
                     display='flex'
                     alignItems={'center'}
