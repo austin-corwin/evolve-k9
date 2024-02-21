@@ -13,9 +13,14 @@ const About: React.FC<IAbout> = () => {
                     // fontSize={{ base: 'md', lg: '3xl', xl: '4xl' }}
                     fontSize={{ base: 'md', lg: '6xl', xl: '7xl' }}
                     fontFamily='mont'
-                    color='brandOrange.300'
+                    color='brandBlack.100'
                 >
-                    Meet Marcus Chapman
+                    <Box display='inline-block'>
+                        Meet{' '}
+                        <Text display='inline-block' color='brandGreen.300'>
+                            Marcus
+                        </Text>{' '}
+                    </Box>
                 </Heading>
                 <Text fontWeight={'medium'}>
                     Pupper porgo such treat the neighborhood pupper, boof mlem. Pupperino very
@@ -34,9 +39,9 @@ const About: React.FC<IAbout> = () => {
                     color='brandTan.300'
                     fontFamily='mont'
                     borderWidth='2px'
-                    borderColor='brandTan.200'
+                    borderColor='brandTan.100'
                     _hover={{
-                        bg: 'brandTan.200',
+                        bg: 'brandTan.100',
                         color: 'brandGreen.300',
                         borderColor: 'brandGreen.300',
                     }}
@@ -53,9 +58,9 @@ const About: React.FC<IAbout> = () => {
                     minH={{ base: 300, lg: 500 }}
                 >
                     <Image
-                        objectFit='cover'
                         src='/assets/marcusdogs.jpeg'
                         fill
+                        style={{ objectFit: 'cover' }}
                         alt='Picture of marcus'
                     />
                 </Box>

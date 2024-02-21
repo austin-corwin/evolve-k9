@@ -3,6 +3,7 @@
 import { extendBaseTheme, extendTheme, ThemeConfig } from '@chakra-ui/react'
 
 import { tailwindConstants as tailwind } from './tailwind.constants'
+import componentConfig from './chakra-components/componentConfig'
 
 const theme: ThemeConfig = extendTheme({
     fonts: {
@@ -11,7 +12,7 @@ const theme: ThemeConfig = extendTheme({
         mont: 'var(--font-montserrat), sans-serif',
         hind: 'var(--font-hind), sans-serif',
     },
-    //   components: componentConfig,
+    components: componentConfig,
     colors: {
         ...tailwind.theme.extend.colors,
         ...tailwind.theme.colors,
