@@ -88,6 +88,10 @@ const Contact: React.FC<IContact> = () => {
                             </FormControl>
                         </HStack>
                         <FormControl>
+                            <FormLabel>Area of interest</FormLabel>
+                            <Input type='text' placeholder='Boarding, classes, etc.' />
+                        </FormControl>
+                        <FormControl>
                             <FormLabel>Email</FormLabel>
                             <Input type='email' placeholder='Enter your email' />
                         </FormControl>
