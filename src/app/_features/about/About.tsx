@@ -51,6 +51,8 @@ const About: React.FC<IAbout> = ({ body }) => {
                     h='full'
                     minW={{ base: 100, lg: 500 }}
                     minH={{ base: 300, lg: 500 }}
+                    overflow='hidden'
+                    rounded='xl'
                 >
                     <Image
                         src='/assets/marcusdogs.jpeg'
