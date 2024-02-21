@@ -1,4 +1,5 @@
-import { Box, Button, Flex, HStack, Text, VStack } from '@chakra-ui/react'
+import { Link } from '@chakra-ui/next-js'
+import { Box, Button, Flex, HStack, Stack, Text, VStack } from '@chakra-ui/react'
 import Image from 'next/image'
 import React from 'react'
 
@@ -15,32 +16,54 @@ const Footer: React.FC = () => {
             mt={24}
         >
             <VStack w='full'>
-                <HStack w='full'>
+                <Stack direction={{ base: 'column', lg: 'row' }} w='full'>
                     <Box display='flex' justifyContent='center' w='full'>
-                        <Box w={300} h={300} pos='relative' color='white'>
-                            <Image src='/assets/logo-black.svg' alt='Brand logo' fill={true} />
+                        <Box w={270} h={270} pos='relative' color='white'>
+                            <Image
+                                src='/assets/logo-white-stacked.svg'
+                                alt='Brand logo'
+                                fill={true}
+                            />
                         </Box>
                     </Box>
-                    <VStack display='flex' justifyContent='center' w='full'>
-                        <Text color='brandTan.300'>About</Text>
-                        <Text color='brandTan.300'>Community</Text>
-                        <Text color='brandTan.300'>Training</Text>
-                    </VStack>
-                    <Box display='flex' justifyContent='center' w='full'>
-                        <Button>
-                            <Text color='brandTan.300'>Inquire Now</Text>
+                    <Stack
+                        direction={{ base: 'row' }}
+                        justifyContent='center'
+                        alignItems='center'
+                        w='full'
+                        mb={{ base: 8, md: 0 }}
+                        gap={{ base: 2, md: 8 }}
+                    >
+                        <Link href='#about' color='brandTan.300'>
+                            About
+                        </Link>
+                        <Link href='#community' color='brandTan.300'>
+                            Community
+                        </Link>
+                        <Link href='#training' color='brandTan.300'>
+                            Training
+                        </Link>
+                    </Stack>
+                    <Box
+                        alignItems='center'
+                        display='flex'
+                        justifyContent='center'
+                        w='full'
+                        mb={{ base: 8, md: 0 }}
+                    >
+                        <Button h='auto' variant='primary'>
+                            Inquire Now
                         </Button>
                     </Box>
+                </Stack>
+                <HStack spacing={8} mb={{ base: 8, md: 0 }}>
+                    <Link href='#privacy' color='brandTan.300'>
+                        Privacy
+                    </Link>
+                    <Link href='#terms' color='brandTan.300'>
+                        Terms of Use
+                    </Link>
                 </HStack>
-                <HStack spacing={8} mb={8}>
-                    <Text color='brandTan.300'>Privacy</Text>
-                    <Text color='brandTan.300'>Terms of Use</Text>
-                </HStack>
-                <Flex width='100%' justifyContent='center' wrap='wrap'>
-                    <Text width='50%' textAlign='center' color='gray.600' fontSize='sm'>
-                        Last Login 15.12.2020 - 14:00 | Data last updated on 16.12.20202 - 22:00
-                    </Text>
-                </Flex>
             </VStack>
         </Flex>
     )

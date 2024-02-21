@@ -296,7 +296,7 @@ export const tailwindConstants = {
                 waves: 'waves 6s ease-in-out infinite',
             },
             colors: {
-                primary: '#5D810E',
+                primary: '#59722C',
                 secondary: '#005FB8',
                 info: '#0074E0',
                 success: '#547E11',
