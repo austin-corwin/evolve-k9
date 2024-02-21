@@ -29,7 +29,7 @@ const Hero: React.FC<IHero> = ({ title, subtitle, action = null }) => {
                     {subtitle && (
                         <Heading
                             as='h1'
-                            fontSize={{ base: 'md', lg: '3xl', xl: '4xl' }}
+                            fontSize={{ base: 'xl', lg: '3xl', xl: '4xl' }}
                             fontFamily='mont'
                             color='brandTan.300'
                             maxW={1000}
@@ -44,7 +44,7 @@ const Hero: React.FC<IHero> = ({ title, subtitle, action = null }) => {
                     {title && (
                         <Heading
                             as='h2'
-                            fontSize={{ base: 'md', lg: '6xl', xl: '7xl' }}
+                            fontSize={{ base: '4xl', lg: '6xl', xl: '7xl' }}
                             fontFamily='hind'
                             color='brandTan.300'
                             maxW={1000}

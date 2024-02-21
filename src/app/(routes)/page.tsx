@@ -3,13 +3,14 @@ import { Box, Container, VStack } from '@chakra-ui/react'
 import { Navbar } from '../_components/Navbar'
 import Hero from '../_features/hero/Hero'
 import About from '../_features/about/About'
+import { homepageConfig } from '../_config/pages/homepageConfig'
 const Home = () => {
     return (
         <Box bg='brandTan.100'>
             <Hero
-                title='Where training meets transformation'
+                title={homepageConfig.hero.title}
                 subtitle='evolve K9'
-                action={{ label: 'SEE MORE', href: '#' }}
+                action={homepageConfig.hero.action}
             />
             <Container
                 display='flex'
@@ -18,7 +19,7 @@ const Home = () => {
                 mt={{ base: 16, lg: 24 }}
             >
                 <VStack gap={24}>
-                    <About />
+                    <About body={homepageConfig.about.body} />
                 </VStack>
             </Container>
         </Box>
