@@ -6,7 +6,7 @@ interface IAbout {
     body: string
 }
 
-const About: React.FC<IAbout> = ({ body }) => {
+const Community: React.FC<IAbout> = ({ body }) => {
     return (
         <>
             <Box>
@@ -19,17 +19,16 @@ const About: React.FC<IAbout> = ({ body }) => {
                     color='brandBlack.100'
                 >
                     <Box display='inline-block'>
-                        Evolve K9:{' '}
                         <Text display='inline' color='brandGreen.300'>
-                            Embrace Choice and Control
+                            Stay Engaged and Informed with the Evolve K9 Community!
                         </Text>{' '}
                     </Box>
                 </Heading>
             </Box>
-            <Stack gap={16} w='full' flexDirection={{ base: 'column', lg: 'row' }}>
-                <VStack gap={4} justifyContent='start' alignItems='start'>
+            <Stack gap={16} w='full' flexDirection={{ base: 'column-reverse', lg: 'row-reverse' }}>
+                <VStack gap={4} justifyContent='center' alignItems='start'>
                     <Text fontWeight={'medium'}>{body}</Text>
-                    <Button
+                    {/* <Button
                         display='flex'
                         alignItems={'center'}
                         w='fit'
@@ -47,7 +46,7 @@ const About: React.FC<IAbout> = ({ body }) => {
                         variant='primary'
                     >
                         READ MORE
-                    </Button>
+                    </Button> */}
                 </VStack>
                 <VStack w='full'>
                     <Box
@@ -71,4 +70,4 @@ const About: React.FC<IAbout> = ({ body }) => {
         </>
     )
 }
-export default About
+export default Community

@@ -6,14 +6,12 @@ import About from '../_features/about/About'
 import { homepageConfig } from '../_config/pages/homepageConfig'
 import Contact from '../_features/contact/Contact'
 import Services from '../_features/services/Services'
-import Community from '../_features/community/Community'
-import Testimonials from '../_features/testimonials/Testimonials'
 const Home = () => {
     return (
         <Box bg='brandTan.300'>
             <Hero
                 title={homepageConfig.hero.title}
-                subtitle={homepageConfig.hero.subtitle}
+                subtitle='evolve K9'
                 action={homepageConfig.hero.action}
             />
             <Container
@@ -37,20 +35,7 @@ const Home = () => {
                 flexDirection='column'
                 gap={24}
             >
-                <Community
-                    body={`Unlock a world of canine excellence by connecting with our vibrant community. Dive into a wealth of training resources, exclusive content, and exciting company updates tailored just for you. Join us in fostering a community bound by a shared passion for dog training and a commitment to the evolving journey of our beloved canine companions. Your connection with Evolve K9 goes beyond training—it's a shared experience, a source of inspiration, and a gateway to a world where every tail wags with joy. Embrace the journey; connect, learn, and evolve with us!`}
-                />
-            </Container>
-            <Container
-                display='flex'
-                maxW={{ base: 500, md: 800, lg: 1000, xl: 1280 }}
-                bg='brandTan.300'
-                mt={{ base: 16, lg: 24 }}
-                flexDirection='column'
-                gap={24}
-            >
                 <Services />
-                <Testimonials body='test' />
             </Container>
         </Box>
     )

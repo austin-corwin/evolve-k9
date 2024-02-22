@@ -19,6 +19,7 @@ const MenuLinks: React.FC<IMenuLinksProps> = ({ isOpen = false }) => (
             <MenuItem to='#about'>About</MenuItem>
             <MenuItem to='#community'>Community</MenuItem>
             <MenuItem to='#training'>Training</MenuItem>
+            <MenuItem to='/contact'>Contact</MenuItem>
             ...
         </Stack>
     </Box>
