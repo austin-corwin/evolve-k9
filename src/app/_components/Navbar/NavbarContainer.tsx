@@ -15,7 +15,7 @@ const NavbarContainer: React.FC<INavbarContainerProps> = ({ children }) => {
             // mb={8}
             p={3}
             pr={9}
-            bg={['brandTan.100']}
+            bg={['brandTan.300']}
             color={['white']}
         >
             {children}

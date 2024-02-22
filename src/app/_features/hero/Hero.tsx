@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Button, Flex, Heading, Text } from '@chakra-ui/react'
+import { Box, Button, Container, Flex, Heading, Text } from '@chakra-ui/react'
 
 interface IHero {
     title: string
@@ -14,61 +14,65 @@ const Hero: React.FC<IHero> = ({ title, subtitle, action = null }) => {
     return (
         <Box h='full'>
             <Flex
-                bgImg='/assets/dog.jpg'
+                bgImg='/assets/echo-summit-hero.jpg'
+                bgColor='rgb(51, 51, 51, 0.5)'
                 bgPosition='center'
                 bgSize='cover'
                 position='relative'
                 w='full'
-                h={{ base: '60vh', xl: '80vh' }}
-                alignItems='start'
-                justifyContent='start'
+                h={{ base: '50vh', xl: '80vh' }}
+                alignItems={{ base: 'center', md: 'start' }}
+                justifyContent={{ base: 'center', md: 'start' }}
                 flexDirection='column'
-                p={16}
+                px={{ base: 4, md: 16 }}
+                py={{ base: 8, md: 16 }}
+                bgBlendMode={'multiply'}
             >
-                <Flex flexDir='column' gap={4}>
-                    {subtitle && (
-                        <Heading
-                            as='h1'
-                            fontSize={{ base: 'xl', lg: '3xl', xl: '4xl' }}
-                            fontFamily='mont'
-                            color='brandTan.300'
-                            maxW={1000}
-                            // position='absolute'
-                            // top='50%'
-                            // left='30%'
-                            // transform='translate(-50%, -50%)'
-                        >
-                            {subtitle}
-                        </Heading>
-                    )}
-                    {title && (
-                        <Heading
-                            as='h2'
-                            fontSize={{ base: '4xl', lg: '6xl', xl: '7xl' }}
-                            fontFamily='hind'
-                            color='brandTan.300'
-                            maxW={1000}
-                        >
-                            {title}
-                        </Heading>
-                    )}
-                    {action && (
-                        <Button
-                            alignSelf={'flex-start'}
-                            display='flex'
-                            w='fit'
-                            fontSize='2xl'
-                            bg='brandGreen.300'
-                            color='brandTan.300'
-                            fontFamily='mont'
-                            _hover={{ bg: 'brandTan.300', color: 'brandGreen.300' }}
-                            transition={'all 0.3s ease-in-out'}
-                            border='2px'
-                            borderColor='brandTan.300'
-                            as='a'
-                            href={action.href}
-                        >
-                            <svg
+                <Container
+                    display='flex'
+                    maxW={{ base: 500, md: 800, lg: 1000, xl: 1680 }}
+                    mt={{ base: 16, lg: 24 }}
+                    flexDirection='column'
+                    gap={24}
+                >
+                    <Flex flexDir='column' gap={4} w='full'>
+                        {subtitle && (
+                            <Heading
+                                as='h1'
+                                fontSize={{ base: 'xl', lg: '3xl', xl: '4xl' }}
+                                fontFamily='mont'
+                                color='brandTan.300'
+                                maxW={1000}
+                                // position='absolute'
+                                // top='50%'
+                                // left='30%'
+                                // transform='translate(-50%, -50%)'
+                            >
+                                {subtitle}
+                            </Heading>
+                        )}
+                        {title && (
+                            <Heading
+                                as='h2'
+                                fontSize={{ base: '5xl', lg: '6xl', xl: '8xl', '2xl': '7rem' }}
+                                fontFamily='hind'
+                                color='brandTan.300'
+                                maxW={1000}
+                                w='full'
+                            >
+                                {title}
+                            </Heading>
+                        )}
+                        {action && (
+                            <Button
+                                alignSelf={'flex-start'}
+                                display='flex'
+                                w='fit'
+                                variant='primary'
+                                as='a'
+                                href={action.href}
+                            >
+                                {/* <svg
                                 xmlns='http://www.w3.org/2000/svg'
                                 version='1.1'
                                 viewBox='0 0 419.14 403.6'
@@ -82,11 +86,12 @@ const Hero: React.FC<IHero> = ({ title, subtitle, action = null }) => {
                                         transform='translate(119 256.27)'
                                     ></path>
                                 </g>
-                            </svg>
-                            <Text ml={2}>{action.label}</Text>
-                        </Button>
-                    )}
-                </Flex>
+                            </svg> */}
+                                <Text ml={2}>{action.label}</Text>
+                            </Button>
+                        )}
+                    </Flex>
+                </Container>
                 {/* <Image
                 src={'/assets/dog.jpg'}
                 alt='German shepherd dog'

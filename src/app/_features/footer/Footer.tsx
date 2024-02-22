@@ -18,9 +18,16 @@ const Footer: React.FC = () => {
             <VStack w='full'>
                 <Stack direction={{ base: 'column', lg: 'row' }} w='full'>
                     <Box display='flex' justifyContent='center' w='full'>
-                        <Box w={270} h={270} pos='relative' color='white'>
+                        <Box
+                            w={270}
+                            h={270}
+                            pos='relative'
+                            color='white'
+                            overflow='hidden'
+                            rounded='xl'
+                        >
                             <Image
-                                src='/assets/logo-white-stacked.svg'
+                                src='/assets/forest-stacked-logo.svg'
                                 alt='Brand logo'
                                 fill={true}
                             />
@@ -57,7 +64,7 @@ const Footer: React.FC = () => {
                     </Box>
                 </Stack>
                 <HStack spacing={8} mb={{ base: 8, md: 0 }}>
-                    <Link href='#privacy' color='brandTan.300'>
+                    <Link href='/privacy' color='brandTan.300'>
                         Privacy
                     </Link>
                     <Link href='#terms' color='brandTan.300'>

@@ -23,7 +23,7 @@ const Contact: React.FC<IContact> = () => {
                 display='flex'
                 maxW={{ base: 500, md: 800, lg: 1000, xl: 1280 }}
                 // bg='brandTan.100'
-                my={{ base: 16, lg: 24 }}
+                my={{ base: 8, lg: 24 }}
                 flexDirection='column'
                 gap={24}
             >
@@ -34,15 +34,11 @@ const Contact: React.FC<IContact> = () => {
                     alignItems='center'
                 >
                     <VStack h='full' alignItems='start' justifyContent='start'>
-                        {/* <Text fontFamily='font-mont' fontSize='8rem' color='brandTan.300'>
-                            Reach out today
-                        </Text> */}
                         <Heading
                             as='h2'
                             fontSize={{ base: '4xl', lg: '6xl', xl: '7xl' }}
                             fontFamily='mont'
                             color='brandTan.300'
-                            // maxW={00}
                         >
                             Reach out today
                         </Heading>
@@ -71,7 +67,7 @@ const Contact: React.FC<IContact> = () => {
                         rounded='xl'
                         w='fit-content'
                         as='form'
-                        bg='white'
+                        bg='brandTan.200'
                         p={6}
                     >
                         <Box w={200} h={100} pos='relative' color='white'>
@@ -88,6 +84,10 @@ const Contact: React.FC<IContact> = () => {
                             </FormControl>
                         </HStack>
                         <FormControl>
+                            <FormLabel>Zip Code</FormLabel>
+                            <Input type='number' placeholder='Enter your zip code' />
+                        </FormControl>
+                        <FormControl>
                             <FormLabel>Area of interest</FormLabel>
                             <Input type='text' placeholder='Boarding, classes, etc.' />
                         </FormControl>
@@ -99,9 +99,16 @@ const Contact: React.FC<IContact> = () => {
                             <FormLabel>Phone Number</FormLabel>
                             <Input type='tel' placeholder='Enter your phone number' />
                         </FormControl>
+                        {/* <Text fontSize='xs' color='brandGreen.300'>
+                            By submitting this form, you agree to our Privacy Policy and Terms of Service
+                        </Text> */}
                         <Button mt={2} type='submit' variant='primary' w='full'>
                             Submit
                         </Button>
+                        <Text fontSize='xs' color='brandBlack.300'>
+                            By submitting this form, you opt-in to receive SMS communications from
+                            Evolve K9 LLC
+                        </Text>
                     </VStack>
                 </Stack>
             </Container>

@@ -1,14 +1,14 @@
 export const homepageConfig = {
     hero: {
-        title: 'Where training meets transformation',
-        subtitle: 'evolve K9',
+        title: 'Embrace Choice & Control',
+        subtitle: 'Evolve K9 - Northern Colorado Dog Training',
         image: 'homepage-hero-image.jpg',
         action: {
-            label: 'SEE MORE',
-            href: '#',
+            label: 'Schedule a Free Phone Consultation',
+            href: '/contact',
         },
     },
     about: {
-        body: 'Heckin angery woofer doge vvv heckin angery woofer fluffer smol very taste wow, ur givin me a spook borkf you are doing me the shock pupperino long water shoob. Maximum borkdrive super chub heckin good boys and girls mlem fat boi, aqua doggo doggorino fluffer heckin good boys and girls ur givin me a spook, aqua doggo h*ck boof. Wow such tempt wrinkler shibe corgo heck, heckin angery woofer wow such tempt extremely cuuuuuute. Shoober boof stop it fren, pupperino. Borkf woofer shooberino shoob borkdrive very hand that feed shibe, blep very good spot sub woofer noodle horse. Much ruin diet most angery pupper I have ever seen pats doge, shibe.',
+        body: `Welcome to Evolve K9!  We are dedicated to empowering dogs to make good choices for themselves. Through our training programs, we instill decision-making skills that promote independence, confidence, and a stronger connection between dogs and their owners. Recognizing the importance of a cooperative partnership, our training methods provide owners with the control needed to guide and shape their dog's behavior. This empowerment leads to clear communication, well-defined boundaries, and a solid foundation for a harmonious relationship. We specialize in providing clients the skills and knowledge needed to live a harmonious life with their dogs. We simplify the training journey through a holistic approach that includes relationship, freedom, confidence, basic and advanced obedience, as well as targeted behavioral modification.`,
     },
 }
