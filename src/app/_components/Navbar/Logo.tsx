@@ -11,7 +11,7 @@ const Logo: React.FC<ILogoProps> = ({ color }) => {
     return (
         <Link href='/'>
             <Box color={color}>
-                <Box pos='relative' w='170px' minH='50px'>
+                <Box pos='relative' w='130px' minH='50px'>
                     <Image src='/assets/logo-black.svg' alt='Brand logo' fill={true} />
                 </Box>
             </Box>

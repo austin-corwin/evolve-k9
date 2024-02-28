@@ -31,11 +31,11 @@ const Hero: React.FC<IHero> = ({ title, subtitle, action = null }) => {
                 <Container
                     display='flex'
                     maxW={{ base: 500, md: 800, lg: 1000, xl: 1680 }}
-                    mt={{ base: 16, lg: 24 }}
+                    mt={{ base: 0, lg: 24 }}
                     flexDirection='column'
                     gap={24}
                 >
-                    <Flex flexDir='column' gap={4} w='full'>
+                    <Flex flexDir='column' gap={{ base: 1, lg: 4 }} w='full'>
                         {subtitle && (
                             <Heading
                                 as='h1'
@@ -59,6 +59,7 @@ const Hero: React.FC<IHero> = ({ title, subtitle, action = null }) => {
                                 color='brandTan.300'
                                 maxW={1000}
                                 w='full'
+                                lineHeight={{ base: '1', lg: 'auto' }}
                             >
                                 {title}
                             </Heading>
@@ -67,7 +68,7 @@ const Hero: React.FC<IHero> = ({ title, subtitle, action = null }) => {
                             <Button
                                 alignSelf={'flex-start'}
                                 display='flex'
-                                w='fit'
+                                w={{ base: 'full', lg: 'fit' }}
                                 variant='primary'
                                 as='a'
                                 href={action.href}

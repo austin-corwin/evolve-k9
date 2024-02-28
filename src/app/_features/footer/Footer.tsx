@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
             padding={4}
             bg='brandBlack.300'
             as='footer'
-            mt={24}
+            pt={24}
         >
             <VStack w='full'>
                 <Stack direction={{ base: 'column', lg: 'row' }} w='full'>
@@ -25,6 +25,8 @@ const Footer: React.FC = () => {
                             color='white'
                             overflow='hidden'
                             rounded='xl'
+                            as='a'
+                            href='/'
                         >
                             <Image
                                 src='/assets/forest-stacked-logo.svg'
@@ -41,11 +43,8 @@ const Footer: React.FC = () => {
                         mb={{ base: 8, md: 0 }}
                         gap={{ base: 2, md: 8 }}
                     >
-                        <Link href='#about' color='brandTan.300'>
+                        <Link href='/#about' color='brandTan.300'>
                             About
-                        </Link>
-                        <Link href='#community' color='brandTan.300'>
-                            Community
                         </Link>
                         <Link href='#training' color='brandTan.300'>
                             Training
@@ -59,7 +58,7 @@ const Footer: React.FC = () => {
                         mb={{ base: 8, md: 0 }}
                     >
                         <Button h='auto' variant='primary'>
-                            Inquire Now
+                            Schedule Now
                         </Button>
                     </Box>
                 </Stack>

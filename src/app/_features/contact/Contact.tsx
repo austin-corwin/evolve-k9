@@ -13,23 +13,27 @@ import {
 } from '@chakra-ui/react'
 import Image from 'next/image'
 import React from 'react'
+import { homepageConfig } from '@/app/_config/pages/homepageConfig'
+import { Rubik_Marker_Hatch } from 'next/font/google'
+import ContactForm from '../forms/ContactForm'
 
 interface IContact {}
 
 const Contact: React.FC<IContact> = () => {
+    const { title, subtitle, body, formFields } = homepageConfig.contact
     return (
         <Box py={16} px={{ md: 8 }} bg='brandBlack.300' w='full' mt={24}>
             <Container
                 display='flex'
                 maxW={{ base: 500, md: 800, lg: 1000, xl: 1280 }}
-                // bg='brandTan.100'
                 my={{ base: 8, lg: 24 }}
                 flexDirection='column'
                 gap={24}
+                px={{ base: 6, lg: 4 }}
             >
                 <Stack
                     justifyContent={{ md: 'space-between' }}
-                    direction={{ base: 'column', md: 'row' }}
+                    direction={{ base: 'column', lg: 'row' }}
                     gap={8}
                     alignItems='center'
                 >
@@ -40,76 +44,21 @@ const Contact: React.FC<IContact> = () => {
                             fontFamily='mont'
                             color='brandTan.300'
                         >
-                            Reach out today
+                            {title}
                         </Heading>
-                        <Text color='brandTan.300'>
-                            Leave us your information and we'll reach out to schedule a phone call
-                            consultation within 48 hours.
-                        </Text>
-                        <Text mt={8} fontSize='2xl' fontWeight='bold' color='brandTan.300'>
-                            Reason you should reach out
-                        </Text>
-                        <Text color='brandTan.300'>
-                            Leave us your information and we'll reach out to schedule a phone call
-                            consultation within 48 hours.
-                        </Text>
-                        <Text fontSize='2xl' fontWeight='bold' color='brandTan.300'>
-                            Reason you should reach out
-                        </Text>
-                        <Text color='brandTan.300'>
-                            Leave us your information and we'll reach out to schedule a phone call
-                            consultation within 48 hours.
-                        </Text>
+                        <Text color='brandTan.300'>{subtitle}</Text>
+                        {body.map(({ text, title }) => (
+                            <React.Fragment key={Math.random()}>
+                                <Text mt={8} fontSize='2xl' fontWeight='bold' color='brandTan.300'>
+                                    {title}
+                                </Text>
+                                <Text color='brandTan.300'>{text}</Text>
+                            </React.Fragment>
+                        ))}
                     </VStack>
-                    <VStack
-                        shadow='xl'
-                        gap={4}
-                        rounded='xl'
-                        w='fit-content'
-                        as='form'
-                        bg='brandTan.200'
-                        p={6}
-                    >
-                        <Box w={200} h={100} pos='relative' color='white'>
-                            <Image src='/assets/logo-black.svg' alt='Brand logo' fill={true} />
-                        </Box>
-                        <HStack>
-                            <FormControl>
-                                <FormLabel>First Name</FormLabel>
-                                <Input type='text' placeholder='Enter your first name' />
-                            </FormControl>
-                            <FormControl>
-                                <FormLabel>Last Name</FormLabel>
-                                <Input type='text' placeholder='Enter your last name' />
-                            </FormControl>
-                        </HStack>
-                        <FormControl>
-                            <FormLabel>Zip Code</FormLabel>
-                            <Input type='number' placeholder='Enter your zip code' />
-                        </FormControl>
-                        <FormControl>
-                            <FormLabel>Area of interest</FormLabel>
-                            <Input type='text' placeholder='Boarding, classes, etc.' />
-                        </FormControl>
-                        <FormControl>
-                            <FormLabel>Email</FormLabel>
-                            <Input type='email' placeholder='Enter your email' />
-                        </FormControl>
-                        <FormControl>
-                            <FormLabel>Phone Number</FormLabel>
-                            <Input type='tel' placeholder='Enter your phone number' />
-                        </FormControl>
-                        {/* <Text fontSize='xs' color='brandGreen.300'>
-                            By submitting this form, you agree to our Privacy Policy and Terms of Service
-                        </Text> */}
-                        <Button mt={2} type='submit' variant='primary' w='full'>
-                            Submit
-                        </Button>
-                        <Text fontSize='xs' color='brandBlack.300'>
-                            By submitting this form, you opt-in to receive SMS communications from
-                            Evolve K9 LLC
-                        </Text>
-                    </VStack>
+                    <Box w='fit-content'>
+                        <ContactForm />
+                    </Box>
                 </Stack>
             </Container>
         </Box>
