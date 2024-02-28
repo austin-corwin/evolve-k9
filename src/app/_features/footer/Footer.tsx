@@ -57,7 +57,7 @@ const Footer: React.FC = () => {
                         w='full'
                         mb={{ base: 8, md: 0 }}
                     >
-                        <Button h='auto' variant='primary'>
+                        <Button as='a' href='/contact' h='auto' variant='primary'>
                             Schedule Now
                         </Button>
                     </Box>
@@ -66,7 +66,7 @@ const Footer: React.FC = () => {
                     <Link href='/privacy' color='brandTan.300'>
                         Privacy
                     </Link>
-                    <Link href='#terms' color='brandTan.300'>
+                    <Link href='/terms' color='brandTan.300'>
                         Terms of Use
                     </Link>
                 </HStack>

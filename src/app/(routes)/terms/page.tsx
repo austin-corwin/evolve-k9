@@ -21,7 +21,7 @@ const PrivacyPage: NextPage = () => {
                 fontFamily='mont'
                 color='brandBlack.100'
             >
-                Privacy Policy
+                Terms of Use
             </Heading>
             <Box fontWeight='semibold' fontSize='lg'>
                 Doggo ipsum shooberino heck pats. Fat boi borking doggo long woofer very jealous

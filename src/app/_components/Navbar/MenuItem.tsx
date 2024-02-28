@@ -10,13 +10,7 @@ interface IMenuItemProps {
 const MenuItem: React.FC<IMenuItemProps> = ({ children, to = '/' }) => {
     const setIsOpen = useDrawer((state) => state.setIsOpen)
     return (
-        <Link
-            onClick={() => setIsOpen(false)}
-            fontWeight='bold'
-            _hover={{ color: 'brandGreen.300' }}
-            color='dark'
-            href={to}
-        >
+        <Link fontWeight='bold' _hover={{ color: 'brandGreen.300' }} color='dark' href={to}>
             <Text>{children}</Text>
         </Link>
     )

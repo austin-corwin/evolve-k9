@@ -59,9 +59,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                                             ]}
                                             pt={[4, 4, 0, 0]}
                                         >
-                                            <MenuItem to='/#about'>About</MenuItem>
-                                            <MenuItem to='/#programs'>Programs</MenuItem>
-                                            <MenuItem to='/contact'>Contact</MenuItem>
+                                            <Box onClick={() => setIsOpen(false)}>
+                                                <MenuItem to='/#about'>About</MenuItem>
+                                            </Box>
+                                            <Box onClick={() => setIsOpen(false)}>
+                                                <MenuItem to='/#programs'>Programs</MenuItem>
+                                            </Box>
+                                            <Box onClick={() => setIsOpen(false)}>
+                                                <MenuItem to='/contact'>Contact</MenuItem>
+                                            </Box>
                                         </VStack>
                                     </DrawerBody>
                                 </Box>
