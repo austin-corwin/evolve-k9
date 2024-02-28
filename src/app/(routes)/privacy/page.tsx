@@ -3,7 +3,6 @@ import { homepageConfig } from '@/app/_config/pages/homepageConfig'
 import About from '@/app/_features/about/About'
 import Contact from '@/app/_features/contact/Contact'
 import Hero from '@/app/_features/hero/Hero'
-import Services from '@/app/_features/services/Services'
 import {
     Box,
     Button,

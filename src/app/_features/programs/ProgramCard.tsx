@@ -16,12 +16,16 @@ interface ICard {
     icon: React.ForwardRefExoticComponent<Omit<React.SVGProps<SVGSVGElement>, 'ref'>>
     title: string
     children?: React.ReactNode
+    action?: {
+        label: string
+        href: string
+    }
 }
 
-const ServicesCard: React.FC<ICard> = ({ icon, title, children }) => {
+const ProgramCard: React.FC<ICard> = ({ icon, title, children, action }) => {
     return (
         <Card
-            direction={{ base: 'column', sm: 'row' }}
+            direction={{ base: 'column', md: 'row' }}
             overflow='hidden'
             variant='outline'
             gap={8}
@@ -35,28 +39,31 @@ const ServicesCard: React.FC<ICard> = ({ icon, title, children }) => {
                 justifyContent='center'
                 w='full'
                 pos='relative'
-                minW={{ base: '100%', sm: '200px' }}
-                maxW={{ base: '100%', sm: '200px' }}
+                minW={{ base: '100%', md: '200px' }}
+                maxW={{ base: '100%', md: '200px' }}
                 minH={{ base: '200px' }}
                 maxH={{ base: '200px' }}
                 bg='brandBlack.300'
                 rounded='xl'
             >
-                {/* <Image objectFit='cover' src='/assets/marcusdogs.jpeg' alt='Caffe Latte' fill /> */}
                 <Icon fill='white' as={icon} boxSize={24} />
             </Box>
             <Stack>
-                <CardBody pt={0}>
+                <CardBody px={0} pt={0}>
                     <Heading color='brandBlack.300' size='xl'>
                         {title}
                     </Heading>
-                    <Text py='2'>{children}</Text>
+                    <Box py='2'>{children}</Box>
                 </CardBody>
-                <CardFooter>
-                    <Button variant='primary'>Reach out</Button>
-                </CardFooter>
+                {action?.label && (
+                    <CardFooter p={0}>
+                        <Button as='a' href={action.href} variant='primary'>
+                            {action.label}
+                        </Button>
+                    </CardFooter>
+                )}
             </Stack>
         </Card>
     )
 }
-export default ServicesCard
+export default ProgramCard
