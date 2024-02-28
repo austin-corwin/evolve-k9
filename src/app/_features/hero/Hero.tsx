@@ -68,7 +68,7 @@ const Hero: React.FC<IHero> = ({ title, subtitle, action = null }) => {
                             <Button
                                 alignSelf={'flex-start'}
                                 display='flex'
-                                w={{ base: 'full', lg: 'fit' }}
+                                w={{ base: 'full', lg: 'fit-content' }}
                                 variant='primary'
                                 as='a'
                                 href={action.href}
