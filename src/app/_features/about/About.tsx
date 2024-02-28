@@ -33,25 +33,6 @@ const About: React.FC<IAbout> = ({ body }) => {
                             {paragraph}
                         </Text>
                     ))}
-                    <Button
-                        display='flex'
-                        alignItems={'center'}
-                        w='fit'
-                        // fontSize='2xl'
-                        // bg='brandGreen.300'
-                        // color='brandTan.300'
-                        // fontFamily='mont'
-                        // borderWidth='2px'
-                        // borderColor='brandTan.100'
-                        // _hover={{
-                        //     bg: 'brandTan.100',
-                        //     color: 'brandGreen.300',
-                        //     borderColor: 'brandGreen.300',
-                        // }}
-                        variant='primary'
-                    >
-                        READ MORE
-                    </Button>
                 </VStack>
                 <VStack w='full'>
                     <Box

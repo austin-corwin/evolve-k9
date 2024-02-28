@@ -1,13 +1,11 @@
 'use client'
 import { Box, Container, VStack } from '@chakra-ui/react'
-import { Navbar } from '../_components/Navbar'
-import Hero from '../_features/hero/Hero'
-import About from '../_features/about/About'
 import { homepageConfig } from '../_config/pages/homepageConfig'
+import About from '../_features/about/About'
 import Contact from '../_features/contact/Contact'
-import Community from '../_features/community/Community'
-import Testimonials from '../_features/testimonials/Testimonials'
+import Hero from '../_features/hero/Hero'
 import Programs from '../_features/programs/Programs'
+import Testimonials from '../_features/testimonials/Testimonials'
 const Home = () => {
     return (
         <Box bg='brandTan.300'>
@@ -30,6 +28,7 @@ const Home = () => {
                 </VStack>
             </Container>
             <Contact />
+            {/* Leave until we have a community page */}
             {/* <Container
                 display='flex'
                 maxW={{ base: 500, md: 800, lg: 1000, xl: 1280 }}
