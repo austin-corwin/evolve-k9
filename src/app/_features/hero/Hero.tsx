@@ -20,7 +20,7 @@ const Hero: React.FC<IHero> = ({ title, subtitle, action = null }) => {
                 bgSize='cover'
                 position='relative'
                 w='full'
-                h={{ base: '50vh', xl: '80vh' }}
+                h={{ base: '50vh', lg: '80vh' }}
                 alignItems={{ base: 'center', md: 'start' }}
                 justifyContent={{ base: 'center', md: 'start' }}
                 flexDirection='column'
