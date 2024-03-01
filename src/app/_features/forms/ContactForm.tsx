@@ -39,11 +39,11 @@ const ContactForm: React.FC<IContactForm> = () => {
     }
     return (
         <form
-            // onSubmit={(e) => {
-            //     e.preventDefault()
-            //     console.log('form was submittedzzzz')
-            //     alert('Form successfully submitted, someone will be in touch with you soon!')
-            // }}
+            onSubmit={(e) => {
+                e.preventDefault()
+                console.log('form was submittedzzzz')
+                alert('Form successfully submitted, someone will be in touch with you soon!')
+            }}
             // onSubmit='submit'
             // onSubmit={handleSubmit}
             // data-netlify='true'
