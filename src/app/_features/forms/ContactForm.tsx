@@ -36,14 +36,18 @@ const ContactForm: React.FC<IContactForm> = () => {
         //         // Handle any errors
         //         console.error('the form was not successful and error is', error)
         //     })
+        fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'multipart/form-data' },
+            body: new URLSearchParams(postData.toString()),
+        })
+            .then(() => console.log('i think a success'))
+            .catch((error) => alert(error))
     }
+
     return (
         <form
-            onSubmit={(e) => {
-                e.preventDefault()
-                console.log('form was submittedzzzz')
-                alert('Form successfully submitted, someone will be in touch with you soon!')
-            }}
+            onSubmit={handleSubmit}
             // onSubmit='submit'
             // onSubmit={handleSubmit}
             // data-netlify='true'
