@@ -90,6 +90,7 @@ export const homepageConfig = {
                 },
             ],
         ],
+        disclaimer: `By submitting this form, you opt-in to receive SMS communications from the Evolve K9 team, Opt-out anytime by replying STOP`,
     },
     programs: {
         title: 'Programs',

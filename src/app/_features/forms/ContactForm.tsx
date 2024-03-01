@@ -86,8 +86,7 @@ const ContactForm: React.FC<IContactForm> = () => {
                     Submit
                 </Button>
                 <Text fontSize='xs' color='brandBlack.300'>
-                    By submitting this form, you opt-in to receive SMS communications from Evolve K9
-                    LLC
+                    {homepageConfig.contact.disclaimer}
                 </Text>
             </VStack>
         </form>

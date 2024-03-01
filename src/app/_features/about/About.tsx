@@ -9,9 +9,8 @@ interface IAbout {
 const About: React.FC<IAbout> = ({ body }) => {
     return (
         <>
-            <Box>
+            <Box id='about'>
                 <Heading
-                    id='about'
                     // fontSize={{ base: 'md', lg: '3xl', xl: '4xl' }}
                     // fontSize={{ base: 'md', lg: '6xl', xl: '7xl' }}
                     fontSize={{ base: '4xl', lg: '6xl', xl: '7xl' }}

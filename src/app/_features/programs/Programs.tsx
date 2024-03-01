@@ -15,9 +15,9 @@ const Programs: React.FC<IPrograms> = () => {
             gap={{ base: 8, md: 16 }}
             w='full'
             flexDirection={{ base: 'column' }}
+            id='programs'
         >
             <Heading
-                id='programs'
                 fontSize={{ base: 'md', lg: '6xl', xl: '7xl' }}
                 fontFamily='mont'
                 color='brandBlack.100'
