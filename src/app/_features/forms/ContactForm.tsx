@@ -2,21 +2,54 @@ import { homepageConfig } from '@/app/_config/pages/homepageConfig'
 import { Box, Button, FormControl, FormLabel, HStack, Input, Text, VStack } from '@chakra-ui/react'
 import Image from 'next/image'
 import React from 'react'
+import { useFormStatus } from 'react-dom'
 
 interface IContactForm {}
 
 const ContactForm: React.FC<IContactForm> = () => {
     const { formFields } = homepageConfig.contact
+    const { pending } = useFormStatus()
+
+    // function submitForm(data: any) {
+    //     console.log('pending is', pending)
+    //     console.log('data is', data)
+    // }
+    const handleSubmit = (event: React.FormEvent) => {
+        event.preventDefault()
+
+        const postData = new FormData()
+        // postData.append('name', event.target.value)
+        // postData.append('email', formData.email)
+        console.log('the form data is', event)
+        // postData.append('message', formData.message);
+
+        // fetch('/', {
+        //     method: 'POST',
+        //     body: postData,
+        // })
+        //     .then((response) => response.json())
+        //     .then((data) => {
+        //         console.log('the form was successful and data is', data)
+        //         // Handle the response data
+        //     })
+        //     .catch((error) => {
+        //         // Handle any errors
+        //         console.error('the form was not successful and error is', error)
+        //     })
+    }
     return (
         <form
-            onSubmit={(e) => {
-                e.preventDefault()
-                console.log('form was submittedzzzz')
-                alert('Form successfully submitted, someone will be in touch with you soon!')
-            }}
-            data-netlify='true'
+            // onSubmit={(e) => {
+            //     e.preventDefault()
+            //     console.log('form was submittedzzzz')
+            //     alert('Form successfully submitted, someone will be in touch with you soon!')
+            // }}
+            // onSubmit='submit'
+            // onSubmit={handleSubmit}
+            // data-netlify='true'
             name='contact'
             method='POST'
+            // action={(e) => submitForm(e)}
         >
             <input type='hidden' name='form-name' value='contact' />
             <VStack
