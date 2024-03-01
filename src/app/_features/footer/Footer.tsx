@@ -47,10 +47,10 @@ const Footer: React.FC = () => {
                         gap={{ base: 2, md: 8 }}
                     >
                         <a href='/#about' color='brandTan.300'>
-                            About
+                            <Text color='brandTan.300'>About</Text>
                         </a>
                         <a href='/#programs' color='brandTan.300'>
-                            Programs
+                            <Text color='brandTan.300'>Programs</Text>
                         </a>
                     </Stack>
                     <VStack
