@@ -66,7 +66,7 @@ export const homepageConfig = {
                 {
                     label: 'Area of interest',
                     type: 'text',
-                    placeholder: 'Boarding, classes, etc.',
+                    placeholder: 'Program information, pricing, consultation, etc.',
                     required: true,
                     name: 'area_of_interest',
                 },

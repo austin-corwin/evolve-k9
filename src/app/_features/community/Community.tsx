@@ -11,7 +11,7 @@ const Community: React.FC<IAbout> = ({ body }) => {
         <>
             <Box>
                 <Heading
-                    id='about'
+                    // id='about'
                     // fontSize={{ base: 'md', lg: '3xl', xl: '4xl' }}
                     // fontSize={{ base: 'md', lg: '6xl', xl: '7xl' }}
                     fontSize={{ base: '4xl', lg: '6xl', xl: '7xl' }}

@@ -14,7 +14,7 @@ const Testimonials: React.FC<ITestimonials> = () => {
         <VStack alignItems='start' display='flex' gap={{ base: 8 }} px={{ base: 2, lg: 0 }}>
             <Box>
                 <Heading
-                    id='about'
+                    id='testimonials'
                     fontSize={{ base: '4xl', lg: '6xl', xl: '7xl' }}
                     fontFamily='mont'
                     color='brandGreen.300'
