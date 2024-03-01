@@ -63,13 +63,8 @@ const PrivacyPage: NextPage = () => {
                 <VStack alignItems='start' gap={4} as='section'>
                     <Heading as='h2'>3. Information Sharing:</Heading>
                     <Text>
-                        <strong>Trusted Partners:</strong> We may share your information with
-                        trusted third-party service providers who assist us in delivering our
-                        services.
-                    </Text>
-                    <Text>
-                        <strong>Legal Requirements:</strong> We may disclose your information if
-                        required by law or to protect our rights and safety.
+                        <strong>Third-Party Services: </strong> Evolve K9 LLC will never share your
+                        information with third-party services.
                     </Text>
                 </VStack>
 
