@@ -46,10 +46,10 @@ const Footer: React.FC = () => {
                         mb={{ base: 8, md: 0 }}
                         gap={{ base: 2, md: 8 }}
                     >
-                        <Link href='/#about' color='brandTan.300'>
+                        <Link href='#about' color='brandTan.300'>
                             About
                         </Link>
-                        <Link href='/#programs' color='brandTan.300'>
+                        <Link href='#programs' color='brandTan.300'>
                             Programs
                         </Link>
                     </Stack>
