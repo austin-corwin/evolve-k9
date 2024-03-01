@@ -1,21 +1,8 @@
 'use client'
 import { homepageConfig } from '@/app/_config/pages/homepageConfig'
-import About from '@/app/_features/about/About'
-import Contact from '@/app/_features/contact/Contact'
 import ContactForm from '@/app/_features/forms/ContactForm'
-import Hero from '@/app/_features/hero/Hero'
-import {
-    Box,
-    Button,
-    Container,
-    FormControl,
-    FormLabel,
-    HStack,
-    Input,
-    VStack,
-} from '@chakra-ui/react'
+import { Box, Container, Heading } from '@chakra-ui/react'
 import { NextPage } from 'next'
-import Image from 'next/image'
 
 const ContactPage: NextPage = () => {
     return (
@@ -26,9 +13,17 @@ const ContactPage: NextPage = () => {
                 bg='brandBlack.300'
                 pt={{ base: 16, lg: 24 }}
                 flexDirection='column'
-                gap={24}
+                gap={{ base: 12, lg: 24 }}
                 alignItems='center'
             >
+                <Heading
+                    as='h2'
+                    fontSize={{ base: '2xl', lg: '3xl', xl: '4xl' }}
+                    fontFamily='mont'
+                    color='brandTan.300'
+                >
+                    {homepageConfig.contact.title}
+                </Heading>
                 <Box w='full' maxW={700}>
                     <ContactForm />
                 </Box>

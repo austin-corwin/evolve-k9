@@ -1,5 +1,6 @@
+import Socials from '@/app/_components/socials/Socials'
 import { Link } from '@chakra-ui/next-js'
-import { Box, Button, Flex, HStack, Stack, Text, VStack } from '@chakra-ui/react'
+import { Box, Button, Flex, HStack, Icon, IconButton, Stack, Text, VStack } from '@chakra-ui/react'
 import Image from 'next/image'
 import React from 'react'
 
@@ -13,11 +14,11 @@ const Footer: React.FC = () => {
             padding={4}
             bg='brandBlack.300'
             as='footer'
-            pt={24}
+            pt={{ base: 12, lg: 24 }}
         >
             <VStack w='full'>
                 <Stack direction={{ base: 'column', lg: 'row' }} w='full'>
-                    <Box display='flex' justifyContent='center' w='full'>
+                    <VStack display='flex' justifyContent='center' w='full' pb={16}>
                         <Box
                             w={270}
                             h={270}
@@ -31,10 +32,12 @@ const Footer: React.FC = () => {
                             <Image
                                 src='/assets/forest-stacked-logo.svg'
                                 alt='Brand logo'
-                                fill={true}
+                                width={270}
+                                height={200}
                             />
                         </Box>
-                    </Box>
+                        <Socials />
+                    </VStack>
                     <Stack
                         direction={{ base: 'row' }}
                         justifyContent='center'
@@ -46,11 +49,11 @@ const Footer: React.FC = () => {
                         <Link href='/#about' color='brandTan.300'>
                             About
                         </Link>
-                        <Link href='#training' color='brandTan.300'>
-                            Training
+                        <Link href='/#programs' color='brandTan.300'>
+                            Programs
                         </Link>
                     </Stack>
-                    <Box
+                    <VStack
                         alignItems='center'
                         display='flex'
                         justifyContent='center'
@@ -60,7 +63,7 @@ const Footer: React.FC = () => {
                         <Button as='a' href='/contact' h='auto' variant='primary'>
                             Schedule Now
                         </Button>
-                    </Box>
+                    </VStack>
                 </Stack>
                 <HStack spacing={8} mb={{ base: 8, md: 0 }}>
                     <Link href='/privacy' color='brandTan.300'>
