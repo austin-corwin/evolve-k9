@@ -20,7 +20,7 @@ const Hero: React.FC<IHero> = ({ title, subtitle, action = null }) => {
                 bgSize='cover'
                 position='relative'
                 w='full'
-                h={{ base: '50vh', lg: '80vh' }}
+                h={{ base: '50vh', lg: '85vh' }}
                 alignItems={{ base: 'center', md: 'start' }}
                 justifyContent={{ base: 'center', md: 'start' }}
                 flexDirection='column'
@@ -50,7 +50,7 @@ const Hero: React.FC<IHero> = ({ title, subtitle, action = null }) => {
                         {title && (
                             <Heading
                                 as='h2'
-                                fontSize={{ base: '5xl', lg: '6xl', xl: '8xl', '2xl': '7rem' }}
+                                fontSize={{ base: '2.5rem', lg: '6xl', xl: '8xl', '2xl': '7rem' }}
                                 fontFamily='hind'
                                 color='brandTan.300'
                                 maxW={1000}
