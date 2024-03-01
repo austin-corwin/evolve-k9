@@ -21,7 +21,7 @@ const About: React.FC<IAbout> = ({ body }) => {
                     <Box display='inline-block'>
                         Evolve K9:{' '}
                         <Text display='inline' color='brandGreen.300'>
-                            Embrace Choice and Control
+                            Embrace Choice & Control
                         </Text>{' '}
                     </Box>
                 </Heading>
