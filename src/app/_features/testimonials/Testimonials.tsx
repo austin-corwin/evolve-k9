@@ -15,23 +15,16 @@ const Testimonials: React.FC<ITestimonials> = () => {
             <Box>
                 <Heading
                     id='about'
-                    // fontSize={{ base: 'md', lg: '3xl', xl: '4xl' }}
-                    // fontSize={{ base: 'md', lg: '6xl', xl: '7xl' }}
                     fontSize={{ base: '4xl', lg: '6xl', xl: '7xl' }}
                     fontFamily='mont'
                     color='brandGreen.300'
                 >
-                    <Box display='inline-block'>
-                        Testimonials
-                        {/* <Text display='inline' color='brandGreen.300'>
-                            Stay Engaged and Informed with the Evolve K9 Community!
-                        </Text>{' '} */}
-                    </Box>
+                    <Box display='inline-block'>Testimonials</Box>
                 </Heading>
             </Box>
-            <Stack gap={16} w='full' flexDirection={{ base: 'column-reverse', lg: 'row-reverse' }}>
-                <VStack gap={{ base: 4, lg: 8 }} w='full'>
-                    {items.map(({ rating, body, author }) => (
+            <Stack gap={{ base: 16, lg: 20 }} w='full' flexDirection={{ base: 'column' }}>
+                {items.map(({ rating, body, author }) => (
+                    <VStack key={body} gap={{ base: 4, lg: 8 }} w='full'>
                         <React.Fragment key={body}>
                             <HStack>
                                 {Array.from({ length: rating }).map((_) => (
@@ -49,8 +42,8 @@ const Testimonials: React.FC<ITestimonials> = () => {
                             </Text>
                             <Text> - {author}</Text>
                         </React.Fragment>
-                    ))}
-                </VStack>
+                    </VStack>
+                ))}
             </Stack>
         </VStack>
     )

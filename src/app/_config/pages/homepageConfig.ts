@@ -15,16 +15,24 @@ export const homepageConfig = {
         ],
     },
     contact: {
-        title: 'Reach out today',
+        title: 'Reach out and take the first step towards empowering your dog to make better decisions for themselves! ',
         subtitle: `Leave us your information and we'll reach out to schedule a phone call consultation within 48 hours.`,
         body: [
             {
-                title: 'Reason you should reach out',
-                text: `Leave us your information and we'll reach out to schedule a phone call consultation within 48 hours.`,
+                title: 'Contact Evolve K9 LLC – Where we empower clients to train like the pros! ',
+                text: `Welcome to Evolve K9, where your canine companions are our top priority. Whether you're seeking information about our specialized training programs, have inquiries about our services, or wish to collaborate, our team is here to assist you.
+                `,
             },
             {
-                title: 'Reason you should reach out',
-                text: `Leave us your information and we'll reach out to schedule a phone call consultation within 48 hours.`,
+                title: 'How to Reach Us:',
+            },
+            {
+                title: 'Contact Form',
+                text: `Complete the form below to get in touch with us. Our team is committed to responding to your inquiries promptly and providing the information you need.`,
+            },
+            {
+                title: 'Phone',
+                text: `For direct assistance, please call us at (970) 235-8466. We're available during business hours to address your questions and concerns.`,
             },
         ],
         formFields: [
@@ -34,12 +42,14 @@ export const homepageConfig = {
                     type: 'text',
                     placeholder: 'Enter your first name',
                     required: true,
+                    name: 'first_name',
                 },
                 {
                     label: 'Last Name',
                     type: 'text',
                     placeholder: 'Enter your last name',
                     required: true,
+                    name: 'last_name',
                 },
             ],
             [
@@ -48,6 +58,7 @@ export const homepageConfig = {
                     type: 'number',
                     placeholder: 'Enter your zip code',
                     required: false,
+                    name: 'zip_code',
                 },
             ],
             [
@@ -56,6 +67,7 @@ export const homepageConfig = {
                     type: 'text',
                     placeholder: 'Boarding, classes, etc.',
                     required: true,
+                    name: 'area_of_interest',
                 },
             ],
             [
@@ -64,6 +76,7 @@ export const homepageConfig = {
                     type: 'email',
                     placeholder: 'Enter your email',
                     required: true,
+                    name: 'email',
                 },
             ],
             [
@@ -72,25 +85,30 @@ export const homepageConfig = {
                     type: 'tel',
                     placeholder: 'Enter your phone number',
                     required: true,
+                    name: 'phone_number',
                 },
             ],
         ],
     },
     programs: {
         title: 'Programs',
-        subtitle: 'Training',
+        subtitle: 'Explore our Evolved training programs!',
         items: [
             {
-                title: 'Package 1 - Basic',
-                body: `Doggo ipsum very taste wow long doggo very jealous pupper, ur givin me a spook. Heckin angery woofer mlem boof doggorino, boof heckin good boys and girls. Blop long water shoob fluffer he made many woofs big ol doggorino heckin good boys and girls big ol, you are doing me the shock sub woofer pats mlem he made many woofs puggorino.`,
+                title: 'Evolved Hybrid Training ',
+                body: `Let us do the heavy lifting for you! Experience a transformative 8-day program with our expert trainers. Your dog will receive 8 full days with our team followed by 8 private sessions covering advanced obedience, including off-leash reliability, behavioral modification for issues like aggression, anxiety, and public manners. Automatic access to Evolve For Life, where you will receive lessons for life and unlimited support!`,
             },
             {
-                title: 'Package 2 - Advanced',
-                body: `Doggo ipsum very taste wow long doggo very jealous pupper, ur givin me a spook. Heckin angery woofer mlem boof doggorino, boof heckin good boys and girls. Blop long water shoob fluffer he made many woofs big ol doggorino heckin good boys and girls big ol, you are doing me the shock sub woofer pats mlem he made many woofs puggorino.`,
+                title: 'Evolved Private Training',
+                body: `Jump into a personalized training journey, where we not only transform your dog but YOU as well! With 12 private lessons, covering basic and advanced obedience, including off-leash reliability and behavioral modification for ALL issues including aggression and anxiety. Our program includes Relationship Repair, where we help guide you on your journey to redefining your relationship with your dog. Automatic access to Evolve For Life, where you will receive lessons for life and unlimited support!`,
             },
             {
-                title: 'Package 3 - Most Advanced',
-                body: `Doggo ipsum very taste wow long doggo very jealous pupper, ur givin me a spook. Heckin angery woofer mlem boof doggorino, boof heckin good boys and girls. Blop long water shoob fluffer he made many woofs big ol doggorino heckin good boys and girls big ol, you are doing me the shock sub woofer pats mlem he made many woofs puggorino.`,
+                title: 'Evolved Essentials',
+                body: `Optimize your dog's learning experience through 8 private lessons, focusing on basic obedience, basic to intermediate behavioral modifications, and a polished introduction to public spaces. Unveil advanced programs, securing a professionally guided pathway to your dog's ongoing development.`,
+            },
+            {
+                title: 'Puppy Essentials',
+                body: `Set yourself and your puppy up for success with 8 private lessons (additional lessons available). Explore Puppy Care and Well-being 101, focusing on problem-solving, structure, and socialization. Lay the foundation for basic and advanced obedience commands, with an emphasis on using play as a reward system. Access advanced programs for an enriched and customized puppy training curriculum.`,
             },
         ],
         action: {
@@ -103,8 +121,15 @@ export const homepageConfig = {
         items: [
             {
                 rating: 5,
-                body: `Vvv puggo smol borking doggo with a long snoot for pats much ruin diet, shoober long water shoob`,
-                author: 'Sarah Fielders',
+                body: `Marcus at EvolveK9 has been working with my border collie Lilly for years. He took her from scared, reactive, and insecure to confident, trusting, and more social. Her quality of life has gone up due to the work Marcus put in with her. I have him to thank for my life long dog best friend. I highly recommend if you want someone professional, knowledgeable and transparent with his approach. You’re dog will be glad you choose Evolve!!`,
+                author: 'Benjamin W.',
+            },
+            {
+                rating: 5,
+                body: `I cannot recommend Evolve K9 enough! Our pup had some behavioral issues that we were struggling to address, I'd tried everything on the internet but it didn't get us very far. But with the expertise of Marcus, balance has been restored to our lives and our dog has never been happier. Marcus took the time to understand our dogs unique personality and our training goals to curate the perfect training methods. What I appreciate most is that our dog is not only more obedient, but he is 200% more calm and through the help of Evolve K9 we've built a trusting relationship.
+
+                We're incredibly grateful for the positive impact Marcus had on our dog's life, and we wholeheartedly recommend them to anyone in need of top-notch training services.`,
+                author: 'Tyler W.',
             },
         ],
     },
