@@ -11,11 +11,14 @@ const ContactForm: React.FC<IContactForm> = () => {
         <form
             onSubmit={(e) => {
                 e.preventDefault()
-                console.log('form was submitted')
+                console.log('form was submittedzzzz')
                 alert('Form successfully submitted, someone will be in touch with you soon!')
             }}
             data-netlify='true'
+            name='contact'
+            method='POST'
         >
+            <input type='hidden' name='form-name' value='contact' />
             <VStack
                 shadow='xl'
                 gap={{ base: 2, lg: 6 }}

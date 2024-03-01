@@ -34,13 +34,13 @@ const Contact: React.FC<IContact> = () => {
                 <Stack
                     justifyContent={{ md: 'space-between' }}
                     direction={{ base: 'column', lg: 'row' }}
-                    gap={8}
+                    gap={{ base: 8, lg: 16 }}
                     alignItems='center'
                 >
                     <VStack h='full' alignItems='start' justifyContent='start'>
                         <Heading
                             as='h2'
-                            fontSize={{ base: '4xl', lg: '6xl', xl: '7xl' }}
+                            fontSize={{ base: '2xl', lg: '3xl', xl: '4xl' }}
                             fontFamily='mont'
                             color='brandTan.300'
                         >
@@ -56,7 +56,7 @@ const Contact: React.FC<IContact> = () => {
                             </React.Fragment>
                         ))}
                     </VStack>
-                    <Box w='fit-content'>
+                    <Box minW={{ base: 300, lg: 500 }} w='fit-content'>
                         <ContactForm />
                     </Box>
                 </Stack>
