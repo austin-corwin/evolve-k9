@@ -14,6 +14,7 @@ import {
 import Footer from '@/app/_features/footer/Footer'
 import useDrawer from '@/app/_state/stores/useDrawer'
 import { fonts } from '@/app/_config/fonts'
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 interface IAppLayout {
     children: React.ReactNode
@@ -76,6 +77,7 @@ const AppLayout: React.FC<IAppLayout> = ({ children }) => {
                     <Footer />
                 </Providers>
             </body>
+            <GoogleAnalytics gaId='G-Q34G8B7T77' />
         </html>
     )
 }
