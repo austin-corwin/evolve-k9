@@ -5,7 +5,11 @@ interface IFacebookIcon {}
 
 const FacebookIcon: React.FC<IFacebookIcon> = () => {
     return (
-        <Link display='flex' alignItems='center' href='https://www.facebook.com/EvolveK9LLC'>
+        <Link
+            display='flex'
+            alignItems='center'
+            href='https://www.facebook.com/profile.php?id=61557243442278'
+        >
             <svg
                 fill='#FFF5D2'
                 xmlns='http://www.w3.org/2000/svg'
