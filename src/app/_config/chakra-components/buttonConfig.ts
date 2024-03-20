@@ -28,14 +28,14 @@ const ButtonConfig: ComponentStyleConfig = {
             pointerEvents: 'none',
             opacity: 0.6,
         },
-        _disabled: {
-            pointerEvents: 'none',
-            opacity: 1,
-            bg: color.gray['50'],
-            color: 'gray.200',
-            borderColor: 'gray.50',
-            borderWidth: '2px',
-        },
+        // _disabled: {
+        //     pointerEvents: 'none',
+        //     opacity: 1,
+        //     bg: color.gray['50'],
+        //     color: 'gray.200',
+        //     borderColor: 'gray.50',
+        //     borderWidth: '2px',
+        // },
     },
     sizes: {
         xs: {

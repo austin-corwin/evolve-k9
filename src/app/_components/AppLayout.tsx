@@ -34,6 +34,7 @@ const AppLayout: React.FC<IAppLayout> = ({ children }) => {
                     <input type='text' name='area_of_interest' />
                     <input type='email' name='email' />
                     <input type='text' name='phone_number' />
+                    <input type='checkbox' name='opt_in' />
                 </form>
                 <Providers>
                     <main className='flex min-h-screen flex-col items-center justify-between'>
