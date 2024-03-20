@@ -1,5 +1,15 @@
 import { homepageConfig } from '@/app/_config/pages/homepageConfig'
-import { Box, Button, FormControl, FormLabel, HStack, Input, Text, VStack } from '@chakra-ui/react'
+import {
+    Box,
+    Button,
+    Checkbox,
+    FormControl,
+    FormLabel,
+    HStack,
+    Input,
+    Text,
+    VStack,
+} from '@chakra-ui/react'
 import Image from 'next/image'
 import React from 'react'
 import { useFormStatus } from 'react-dom'
@@ -71,6 +81,23 @@ const ContactForm: React.FC<IContactForm> = () => {
                         </HStack>
                     )
                 })}
+                <HStack gap={{ base: 2, lg: 6 }} key={Math.random()} w='full'>
+                    <FormControl
+                        display='flex'
+                        flexDirection='row'
+                        alignItems='start'
+                        key={'checkDisclaimer'}
+                        isRequired={true}
+                        gap={{ base: 2 }}
+                    >
+                        <Checkbox w='auto' variant='dark' mt={1} name='opt_in' />
+                        <FormLabel mb={0}>
+                            By checking this box, you opt-in to receive SMS communications from the
+                            Evolve K9 team, Opt-out anytime by replying STOP
+                        </FormLabel>
+                    </FormControl>
+                </HStack>
+
                 <Button
                     mt={2}
                     type='submit'
