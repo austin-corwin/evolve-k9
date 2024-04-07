@@ -36,7 +36,7 @@ export const homepageConfig = {
             },
         ],
         formFields: [
-            // Whatever fields are added here must be added to the html form in layout.tsx
+            // Whatever fields are added here must be added to the netlify html form in layout.tsx
             [
                 {
                     label: 'First Name',
@@ -134,5 +134,9 @@ export const homepageConfig = {
                 author: 'Tyler W.',
             },
         ],
+    },
+    trustedBrands: {
+        title: 'Trusted Brands',
+        logos: ['/assets/ecollarDealer.jpg'],
     },
 }

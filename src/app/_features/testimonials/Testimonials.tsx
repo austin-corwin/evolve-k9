@@ -19,7 +19,7 @@ const Testimonials: React.FC<ITestimonials> = () => {
                     fontFamily='mont'
                     color='brandGreen.300'
                 >
-                    <Box display='inline-block'>Testimonials</Box>
+                    <Box display='inline-block'>{title}</Box>
                 </Heading>
             </Box>
             <Stack gap={{ base: 16, lg: 20 }} w='full' flexDirection={{ base: 'column' }}>
@@ -36,7 +36,7 @@ const Testimonials: React.FC<ITestimonials> = () => {
                                 align='center'
                                 fontWeight='medium'
                                 fontFamily='mont'
-                                fontSize={{ base: 'xl', lg: '3xl' }}
+                                fontSize={{ base: 'lg', lg: '2xl' }}
                             >
                                 {body}
                             </Text>

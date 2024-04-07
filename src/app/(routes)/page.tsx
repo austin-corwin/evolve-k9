@@ -6,6 +6,7 @@ import Contact from '../_features/contact/Contact'
 import Hero from '../_features/hero/Hero'
 import Programs from '../_features/programs/Programs'
 import Testimonials from '../_features/testimonials/Testimonials'
+import TrustedBrands from '../_features/trustedBrands/TrustedBrands'
 const Home = () => {
     return (
         <Box bg='brandTan.300'>
@@ -52,6 +53,7 @@ const Home = () => {
             >
                 <Programs />
                 <Testimonials body='test' />
+                <TrustedBrands />
             </Container>
         </Box>
     )
