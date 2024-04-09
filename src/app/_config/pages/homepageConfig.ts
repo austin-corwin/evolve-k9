@@ -36,7 +36,7 @@ export const homepageConfig = {
             },
         ],
         formFields: [
-            // Whatever fields are added here must be added to the html form in layout.tsx
+            // Whatever fields are added here must be added to the netlify html form in layout.tsx
             [
                 {
                     label: 'First Name',
@@ -97,10 +97,6 @@ export const homepageConfig = {
         subtitle: 'Explore our Evolved training programs!',
         items: [
             {
-                title: 'Evolved Hybrid Training ',
-                body: `Let us do the heavy lifting for you! Experience a transformative 8-day program with our expert trainers. Your dog will receive 8 full days with our team followed by 8 private sessions covering advanced obedience, including off-leash reliability, behavioral modification for issues like aggression, anxiety, and public manners. Automatic access to Evolve For Life, where you will receive lessons for life and unlimited support!`,
-            },
-            {
                 title: 'Evolved Private Training',
                 body: `Jump into a personalized training journey, where we not only transform your dog but YOU as well! With 12 private lessons, covering basic and advanced obedience, including off-leash reliability and behavioral modification for ALL issues including aggression and anxiety. Our program includes Relationship Repair, where we help guide you on your journey to redefining your relationship with your dog. Automatic access to Evolve For Life, where you will receive lessons for life and unlimited support!`,
             },
@@ -134,5 +130,9 @@ export const homepageConfig = {
                 author: 'Tyler W.',
             },
         ],
+    },
+    trustedBrands: {
+        title: 'Trusted Brands',
+        logos: ['/assets/ecollarDealer.jpg'],
     },
 }

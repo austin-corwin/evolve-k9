@@ -1,32 +1,22 @@
 'use client'
-import { Providers } from '@/app/providers'
-import React, { use } from 'react'
-import { MenuItem, Navbar } from './Navbar'
-import {
-    Box,
-    Drawer,
-    DrawerBody,
-    DrawerCloseButton,
-    DrawerContent,
-    DrawerOverlay,
-    VStack,
-} from '@chakra-ui/react'
-import Footer from '@/app/_features/footer/Footer'
-import useDrawer from '@/app/_state/stores/useDrawer'
 import { fonts } from '@/app/_config/fonts'
+import Footer from '@/app/_features/footer/Footer'
+import { Providers } from '@/app/providers'
 import { GoogleAnalytics } from '@next/third-parties/google'
+import React from 'react'
+import { Navbar } from './Navbar'
+import MainNavDrawer from './navigation/MainNavDrawer'
 
 interface IAppLayout {
     children: React.ReactNode
 }
 
 const AppLayout: React.FC<IAppLayout> = ({ children }) => {
-    const isOpen = useDrawer((state) => state.isOpen)
-    const setIsOpen = useDrawer((state) => state.setIsOpen)
     const { hind, montserrat } = fonts
     return (
         <html lang='en' className={`${hind.variable} ${montserrat.variable}`}>
             <body style={{ background: '#FFF5D2' }}>
+                {/* Needed for netlify forms */}
                 <form name='contact' data-netlify netlify-honeypot='bot-field' hidden>
                     <input type='text' name='first_name' />
                     <input type='text' name='last_name' />
@@ -40,40 +30,7 @@ const AppLayout: React.FC<IAppLayout> = ({ children }) => {
                     <main className='flex min-h-screen flex-col items-center justify-between'>
                         <Navbar />
                         {children}
-                        <Drawer isOpen={isOpen} placement='right' onClose={() => setIsOpen(false)}>
-                            <DrawerOverlay />
-                            <DrawerContent>
-                                <Box h='full' bg='#FFF5D2'>
-                                    <DrawerCloseButton />
-                                    {/* <DrawerHeader>Create your account</DrawerHeader> */}
-                                    <DrawerBody pt={8}>
-                                        {/* <Input placeholder='Type here...' /> */}
-                                        {/* <MenuLinks isOpen={isOpen} /> */}
-                                        <VStack
-                                            spacing={8}
-                                            align='center'
-                                            justify={[
-                                                'center',
-                                                'space-between',
-                                                'flex-end',
-                                                'flex-end',
-                                            ]}
-                                            pt={[4, 4, 0, 0]}
-                                        >
-                                            <Box onClick={() => setIsOpen(false)}>
-                                                <MenuItem to='/#about'>About</MenuItem>
-                                            </Box>
-                                            <Box onClick={() => setIsOpen(false)}>
-                                                <MenuItem to='/#programs'>Programs</MenuItem>
-                                            </Box>
-                                            <Box onClick={() => setIsOpen(false)}>
-                                                <MenuItem to='/contact'>Contact</MenuItem>
-                                            </Box>
-                                        </VStack>
-                                    </DrawerBody>
-                                </Box>
-                            </DrawerContent>
-                        </Drawer>
+                        <MainNavDrawer />
                     </main>
                     <Footer />
                 </Providers>
