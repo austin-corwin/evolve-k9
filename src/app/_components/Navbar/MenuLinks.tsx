@@ -19,7 +19,7 @@ const MenuLinks: React.FC<IMenuLinksProps> = () => {
             >
                 <MenuItem to='/#about'>About</MenuItem>
                 <MenuItem to='/#programs'>Programs</MenuItem>
-                <MenuItem to='/contact'>Contact</MenuItem>
+                {/* <MenuItem to='/contact'>Contact</MenuItem> */}
             </Stack>
         </Box>
     )
