@@ -19,42 +19,65 @@ interface IContactForm {}
 const ContactForm: React.FC<IContactForm> = () => {
     const { formFields } = homepageConfig.contact
     const { pending } = useFormStatus()
+    const [firstName, setFirstName] = React.useState('')
+    const [lastName, setLastName] = React.useState('')
 
     // TODO: Add this in to try and make better form submission logic
-    // const handleSubmit = (event: React.FormEvent) => {
-    //     event.preventDefault()
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault()
 
-    //     const postData = new FormData()
-    //     // postData.append('name', event.target.value)
-    //     // postData.append('email', formData.email)
-    //     console.log('the form data is', event)
-    //     // postData.append('message', formData.message);
+        const postData = new FormData()
+        const formData = {
+            first_name: firstName,
+            last_name: lastName,
+            // opt_in: e.target.opt_in.checked,
+        }
+        // postData.append('name', event.target.value)
+        // postData.append('email', formData.email)
+        console.log('the form data is', e.target)
+        console.log('formData is', formData)
+        // postData.append('message', formData.message);
+        const response = await fetch('/api/submit', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Credentials': true,
+            } as any,
+            body: JSON.stringify(formData),
+        })
 
-    //     // fetch('/', {
-    //     //     method: 'POST',
-    //     //     body: postData,
-    //     // })
-    //     //     .then((response) => response.json())
-    //     //     .then((data) => {
-    //     //         console.log('the form was successful and data is', data)
-    //     //         // Handle the response data
-    //     //     })
-    //     //     .catch((error) => {
-    //     //         // Handle any errors
-    //     //         console.error('the form was not successful and error is', error)
-    //     //     })
-    //     fetch('/', {
-    //         method: 'POST',
-    //         headers: { 'Content-Type': 'multipart/form-data' },
-    //         body: new URLSearchParams(postData.toString()),
-    //     })
-    //         .then(() => console.log('i think a success'))
-    //         .catch((error) => alert(error))
-    // }
+        const content = await response.json()
+        console.log('conent is', content)
+        alert(content.data.tableRange)
+        setFirstName('')
+        setLastName('')
+
+        // fetch('/', {
+        //     method: 'POST',
+        //     body: postData,
+        // })
+        //     .then((response) => response.json())
+        //     .then((data) => {
+        //         console.log('the form was successful and data is', data)
+        //         // Handle the response data
+        //     })
+        //     .catch((error) => {
+        //         // Handle any errors
+        //         console.error('the form was not successful and error is', error)
+        //     })
+        // fetch('/', {
+        //     method: 'POST',
+        //     headers: { 'Content-Type': 'multipart/form-data' },
+        //     body: new URLSearchParams(postData.toString()),
+        // })
+        //     .then(() => console.log('i think a success'))
+        //     .catch((error) => alert(error))
+    }
 
     return (
-        <form name='contact' method='POST'>
-            <input type='hidden' name='form-name' value='contact' />
+        <form onSubmit={handleSubmit} name='contact' method='POST'>
+            {/* <input type='hidden' name='form-name' value='contact' /> */}
             <VStack
                 shadow='xl'
                 gap={{ base: 2, lg: 6 }}
@@ -66,7 +89,7 @@ const ContactForm: React.FC<IContactForm> = () => {
                 <Box w={200} h={100} pos='relative' color='white'>
                     <Image src='/assets/logo-black.svg' alt='Brand logo' fill={true} />
                 </Box>
-                {formFields.map((section) => {
+                {/* {formFields.map((section) => {
                     return (
                         <HStack gap={{ base: 2, lg: 6 }} key={Math.random()} w='full'>
                             {section.map((field) => {
@@ -80,7 +103,26 @@ const ContactForm: React.FC<IContactForm> = () => {
                             })}
                         </HStack>
                     )
-                })}
+                })} */}
+                <FormControl isRequired={true}>
+                    <FormLabel>First Name</FormLabel>
+                    <Input
+                        type='text'
+                        name='first_name'
+                        value={firstName}
+                        onChange={({ target }) => setFirstName(target.value)}
+                    />
+                </FormControl>
+                <FormControl isRequired={true}>
+                    <FormLabel>Last Name</FormLabel>
+                    <Input
+                        type='text'
+                        name='last_name'
+                        value={lastName}
+                        onChange={({ target }) => setLastName(target.value)}
+                    />
+                </FormControl>
+
                 <HStack gap={{ base: 2, lg: 6 }} key={Math.random()} w='full'>
                     <FormControl
                         display='flex'
