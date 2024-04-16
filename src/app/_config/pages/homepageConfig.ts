@@ -36,7 +36,6 @@ export const homepageConfig = {
             },
         ],
         formFields: [
-            // Whatever fields are added here must be added to the netlify html form in layout.tsx
             [
                 {
                     label: 'First Name',
