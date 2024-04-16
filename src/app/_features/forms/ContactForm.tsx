@@ -9,52 +9,56 @@ import {
     Input,
     Text,
     VStack,
+    useToast,
 } from '@chakra-ui/react'
 import Image from 'next/image'
 import React from 'react'
-import { useFormStatus } from 'react-dom'
 
 interface IContactForm {}
 
 const ContactForm: React.FC<IContactForm> = () => {
     const { formFields } = homepageConfig.contact
-    const { pending } = useFormStatus()
-
-    // TODO: Add this in to try and make better form submission logic
-    // const handleSubmit = (event: React.FormEvent) => {
-    //     event.preventDefault()
-
-    //     const postData = new FormData()
-    //     // postData.append('name', event.target.value)
-    //     // postData.append('email', formData.email)
-    //     console.log('the form data is', event)
-    //     // postData.append('message', formData.message);
-
-    //     // fetch('/', {
-    //     //     method: 'POST',
-    //     //     body: postData,
-    //     // })
-    //     //     .then((response) => response.json())
-    //     //     .then((data) => {
-    //     //         console.log('the form was successful and data is', data)
-    //     //         // Handle the response data
-    //     //     })
-    //     //     .catch((error) => {
-    //     //         // Handle any errors
-    //     //         console.error('the form was not successful and error is', error)
-    //     //     })
-    //     fetch('/', {
-    //         method: 'POST',
-    //         headers: { 'Content-Type': 'multipart/form-data' },
-    //         body: new URLSearchParams(postData.toString()),
-    //     })
-    //         .then(() => console.log('i think a success'))
-    //         .catch((error) => alert(error))
-    // }
+    const [loading, setLoading] = React.useState(false)
+    const addToast = useToast({
+        position: 'bottom',
+    })
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+        setLoading(true)
+        e.preventDefault()
+        const formData = {
+            first_name: (e as any).target?.[0].value,
+            last_name: (e as any).target?.[1].value,
+            zip_code: (e as any).target?.[2].value,
+            area_of_interest: (e as any).target?.[3].value,
+            email: (e as any).target?.[4].value,
+            phone_number: (e as any).target?.[5].value,
+            opt_in: (e as any).target?.[6].checked,
+        }
+        const response = await fetch('/api', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Credentials': 'true',
+            },
+            body: JSON.stringify(formData),
+        })
+        const content = await response.json()
+        console.log('conent is', content)
+        const { success } = content
+        if (success)
+            addToast({
+                status: success ? 'success' : 'error',
+                description: success
+                    ? `One of our professionals will be in touch with you soon!`
+                    : 'Oops, something went wrong. Please try again later or call us on the phone.',
+                title: success ? 'Form Submitted Successfully' : 'Form Submission Failed',
+            })
+        setLoading(false)
+    }
 
     return (
-        <form name='contact' method='POST'>
-            <input type='hidden' name='form-name' value='contact' />
+        <form onSubmit={handleSubmit} name='contact' method='POST'>
             <VStack
                 shadow='xl'
                 gap={{ base: 2, lg: 6 }}
@@ -109,6 +113,7 @@ const ContactForm: React.FC<IContactForm> = () => {
                         color: 'brandBlack.300',
                     }}
                     color='brandTan.300'
+                    isLoading={loading}
                 >
                     Submit
                 </Button>
