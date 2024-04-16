@@ -32,7 +32,7 @@ const Programs: React.FC<IPrograms> = () => {
                 <ProgramCard
                     icon={BookOpenIcon}
                     title={subtitle}
-                    action={{ label: 'Reach out', href: 'tel:19702358466' }}
+                    action={{ label: 'Reach out', href: '/contact' }}
                 >
                     <VStack gap={8} alignItems={'start'}>
                         {items.map(({ title, body }) => (

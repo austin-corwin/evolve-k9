@@ -28,7 +28,7 @@ const Home = () => {
                     <About body={homepageConfig.about.body} />
                 </VStack>
             </Container>
-            {/* <Contact /> */}
+            <Contact />
             {/* Leave until we have a community page */}
             {/* <Container
                 display='flex'

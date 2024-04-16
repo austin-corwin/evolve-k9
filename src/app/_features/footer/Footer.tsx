@@ -60,7 +60,7 @@ const Footer: React.FC = () => {
                         w='full'
                         mb={{ base: 8, md: 0 }}
                     >
-                        <Button as='a' href='tel:19702358466' h='auto' variant='primary'>
+                        <Button as='a' href='/contact' h='auto' variant='primary'>
                             Schedule Now
                         </Button>
                     </VStack>
