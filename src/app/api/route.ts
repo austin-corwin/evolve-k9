@@ -1,6 +1,5 @@
 import { google } from 'googleapis'
-import { NextApiResponse } from 'next'
-import { NextRequest } from 'next/server'
+import { NextRequest, NextResponse } from 'next/server'
 
 type SheetFormData = {
     first_name: string
@@ -10,12 +9,11 @@ type SheetFormData = {
     email: string
     phone_number: string
 }
-export async function POST(req: NextRequest, res: NextApiResponse) {
-    console.log('req is', req)
+export async function POST(req: NextRequest, res: NextResponse) {
     if (req.method !== 'POST') {
-        return res.status(405).json({ error: 'Method not allowed' })
+        return NextResponse.json({ error: 'Method not allowed' }, { status: 405 })
     }
-    const body = req.body as unknown as SheetFormData
+    const body = (await req.json()) as unknown as SheetFormData
 
     try {
         // Prepare google auth
@@ -34,24 +32,14 @@ export async function POST(req: NextRequest, res: NextApiResponse) {
         const response = await sheets.spreadsheets.values.append({
             spreadsheetId: process.env.GOOGLE_SHEET_ID,
             range: 'A1:G1',
-            // range: 'Sheet1',
             valueInputOption: 'USER_ENTERED',
-            // valueInputOption: 'RAW',
             requestBody: {
                 values: [Object.values(body)],
             },
         })
-        return res.status(200).json({ success: true, response, body: { data: response.data } })
+        return NextResponse.json({ success: true, response, body: { data: response.data } })
     } catch (error) {
         console.error(error)
-        return res.status(500).json({ error: 'Could not submit form data' })
+        return NextResponse.json({ error: 'Could not submit form data' })
     }
-    // const response = await fetch('/.netlify/functions/submit', {
-    //     method: 'POST',
-    //     headers: {
-    //         'Content-Type': 'application/json',
-    //     },
-    //     body: JSON.stringify(data),
-    // })
-    // return response.json()
 }
