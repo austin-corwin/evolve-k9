@@ -44,7 +44,6 @@ const ContactForm: React.FC<IContactForm> = () => {
             body: JSON.stringify(formData),
         })
         const content = await response.json()
-        console.log('conent is', content)
         const { success } = content
         if (success)
             addToast({
