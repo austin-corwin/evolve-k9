@@ -36,7 +36,7 @@ const MainNavDrawer: React.FC<IMainNavDrawer> = () => {
                                 <MenuItem to='/#programs'>Programs</MenuItem>
                             </Box>
                             <Box onClick={() => setIsOpen(false)}>
-                                {/* <MenuItem to='/contact'>Contact</MenuItem> */}
+                                <MenuItem to='/contact'>Contact</MenuItem>
                             </Box>
                         </VStack>
                     </DrawerBody>

@@ -5,7 +5,7 @@ export const homepageConfig = {
         image: 'homepage-hero-image.jpg',
         action: {
             label: 'Schedule a Free Phone Consultation',
-            href: 'tel:19702358466',
+            href: '/contact',
         },
     },
     about: {
@@ -110,7 +110,7 @@ export const homepageConfig = {
         ],
         action: {
             label: 'Reach out',
-            href: 'tel:19702358466',
+            href: '/contact',
         },
     },
     testimonials: {
