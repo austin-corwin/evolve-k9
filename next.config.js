@@ -1,4 +1,8 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+  // images: {
+  //   domains: process.env.STRAPI_ASSETS_BASE_URL,
+  // },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

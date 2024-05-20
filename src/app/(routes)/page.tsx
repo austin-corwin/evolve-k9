@@ -2,40 +2,51 @@
 import React from 'react'
 import axios from 'axios'
 import { Box, Container, VStack } from '@chakra-ui/react'
-import { homepageConfig } from '../_config/pages/homepageConfig'
+import { homepageConfig, homepageConfigFunc } from '../_config/pages/homepageConfig'
 import About from '../_features/about/About'
 import Contact from '../_features/contact/Contact'
 import Hero from '../_features/hero/Hero'
 import Programs from '../_features/programs/Programs'
 import Testimonials from '../_features/testimonials/Testimonials'
 import useData from '../_state/stores/useData'
+import { IAttributes, IStrapiResponse } from '../_config/types/IStrapiResponse'
 
 const auth = `cce16500cc2de2e4c1fe3afeb9d92c329666111d8910a719f09a14c39f4f486520e9aed6b9e5e0d6b4aeb7fef6acd79b26872d8c63dead5636cf42a22bd83b82f2adfb2434f7474db6cd50264c88f1e59776b6a2bbf10db81395828ef38aeb7cf6dbab9f2d38888bc7f1a06ea76d98679ec2729460f949031adabcaf1c277506`
 
-const Home = () => {
+const Home = ({ homepageData }: { homepageData: any }) => {
     const data = useData((state) => state.data)
     const setData = useData((state) => state.setData)
+    const [config, setConfig] = React.useState<IAttributes>()
+    // console.log('homepage data', homepageData)
     React.useEffect(() => {
         console.log('token is', auth)
         axios
-            .get('http://localhost:1337/api/main-nav?populate=*', {
-                headers: {
-                    Authorization: `Bearer cce16500cc2de2e4c1fe3afeb9d92c329666111d8910a719f09a14c39f4f486520e9aed6b9e5e0d6b4aeb7fef6acd79b26872d8c63dead5636cf42a22bd83b82f2adfb2434f7474db6cd50264c88f1e59776b6a2bbf10db81395828ef38aeb7cf6dbab9f2d38888bc7f1a06ea76d98679ec2729460f949031adabcaf1c277506`,
+            .get(
+                // 'http://localhost:1337/api/homepages/1?populate[0]=hero.button&populate[1]=hero.bgImage&populate[2]=navigation',
+                'http://localhost:1337/api/homepages/1?populate=deep',
+                {
+                    headers: {
+                        Authorization: `Bearer cce16500cc2de2e4c1fe3afeb9d92c329666111d8910a719f09a14c39f4f486520e9aed6b9e5e0d6b4aeb7fef6acd79b26872d8c63dead5636cf42a22bd83b82f2adfb2434f7474db6cd50264c88f1e59776b6a2bbf10db81395828ef38aeb7cf6dbab9f2d38888bc7f1a06ea76d98679ec2729460f949031adabcaf1c277506`,
+                    },
                 },
-            })
+            )
             .then((response) => {
                 const { data } = response
-                setData(data?.data?.attributes?.MainNavigation)
-                console.log(data?.data?.attributes?.MainNavigation)
+                const { data: newData }: { data: IStrapiResponse } = data
+                const heroConfig = homepageConfigFunc(newData?.attributes)
+                setConfig(newData?.attributes)
+                // setData(data?.data?.attributes?.MainNavigation)
+                console.log(newData)
             })
     }, [])
 
     return (
         <Box bg='brandTan.300'>
             <Hero
-                title={data?.phoneNumber}
-                subtitle={homepageConfig.hero.subtitle}
-                action={homepageConfig.hero.action}
+                title={config?.hero?.title!}
+                subtitle={config?.hero?.subtitle}
+                action={{ label: config?.hero?.button?.label!, href: config?.hero?.button?.link! }}
+                bgImage={config?.hero?.bgImage?.data?.attributes?.url!}
             />
             <Container
                 display='flex'
@@ -80,17 +91,17 @@ const Home = () => {
     )
 }
 
-Home.getInitialProps = async () => {
-    try {
-        const res = await axios.get('http://localhost:1337/api/main-nav?populate=*', {
-            headers: {
-                Authorization: `Bearer cce16500cc2de2e4c1fe3afeb9d92c329666111d8910a719f09a14c39f4f486520e9aed6b9e5e0d6b4aeb7fef6acd79b26872d8c63dead5636cf42a22bd83b82f2adfb2434f7474db6cd50264c88f1e59776b6a2bbf10db81395828ef38aeb7cf6dbab9f2d38888bc7f1a06ea76d98679ec2729460f949031adabcaf1c277506`,
-            },
-        })
-        const homepageData = res.data
-        return { homepageData }
-    } catch (error) {
-        return { error }
-    }
-}
+// Home.getInitialProps = async () => {
+//     try {
+//         const res = await axios.get('http://localhost:1337/api/hero?populate=*', {
+//             headers: {
+//                 Authorization: `Bearer cce16500cc2de2e4c1fe3afeb9d92c329666111d8910a719f09a14c39f4f486520e9aed6b9e5e0d6b4aeb7fef6acd79b26872d8c63dead5636cf42a22bd83b82f2adfb2434f7474db6cd50264c88f1e59776b6a2bbf10db81395828ef38aeb7cf6dbab9f2d38888bc7f1a06ea76d98679ec2729460f949031adabcaf1c277506`,
+//             },
+//         })
+//         const homepageData = res.data
+//         return { homepageData }
+//     } catch (error) {
+//         return { error }
+//     }
+// }
 export default Home

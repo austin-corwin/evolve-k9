@@ -136,3 +136,14 @@ export const homepageConfig = {
         ],
     },
 }
+export const homepageConfigFunc = (data: any) => ({
+    hero: {
+        title: data?.title,
+        subtitle: data?.subtitle,
+        image: 'homepage-hero-image.jpg',
+        action: {
+            label: data?.button?.label,
+            href: data?.button?.link,
+        },
+    },
+})
