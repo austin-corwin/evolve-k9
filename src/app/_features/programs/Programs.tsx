@@ -8,7 +8,7 @@ import { homepageConfig } from '@/app/_config/pages/homepageConfig'
 interface IPrograms {}
 
 const Programs: React.FC<IPrograms> = () => {
-    const { title, subtitle, items } = homepageConfig.programs
+    const { title, subtitle, items, subSectionItems } = homepageConfig.programs
     return (
         <Stack
             px={{ base: 2, md: 'auto' }}
@@ -43,6 +43,31 @@ const Programs: React.FC<IPrograms> = () => {
                                 <Text>{body}</Text>
                             </VStack>
                         ))}
+                        <Box rounded='xl' p={6} borderWidth={2} borderColor={'green'}>
+                            <Text
+                                w='full'
+                                mb={4}
+                                color='brandGreen.300'
+                                fontSize='lg'
+                                fontWeight='semibold'
+                            >
+                                Past or Current Clients Only:
+                            </Text>
+                            <VStack gap={6}>
+                                {subSectionItems.map(({ title, body }) => (
+                                    <VStack key={title} alignItems={'start'}>
+                                        <Text
+                                            color='brandOrange.300'
+                                            fontSize='xl'
+                                            fontWeight='semibold'
+                                        >
+                                            {title}
+                                        </Text>
+                                        <Text>{body}</Text>
+                                    </VStack>
+                                ))}
+                            </VStack>
+                        </Box>
                     </VStack>
                 </ProgramCard>
             </Stack>
