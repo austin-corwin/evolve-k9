@@ -36,7 +36,7 @@ const Testimonials: React.FC<ITestimonials> = () => {
                                 align='center'
                                 fontWeight='medium'
                                 fontFamily='mont'
-                                fontSize={{ base: 'lg', lg: '2xl' }}
+                                fontSize={{ base: 'md', lg: 'lg' }}
                             >
                                 {body}
                             </Text>

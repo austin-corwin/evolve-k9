@@ -37,6 +37,16 @@ const Footer: React.FC = () => {
                             />
                         </Box>
                         <Socials />
+                        <Text
+                            _hover={{ color: 'brandGreen.300' }}
+                            mt={2}
+                            as={'a'}
+                            href='tel:1970-235-8466'
+                            color='brandTan.300'
+                        >
+                            +1(970)-235-8466
+                        </Text>
+                        <Text color='brandTan.300'>Tues - Sat 9:00am - 6:00pm</Text>
                     </VStack>
                     <Stack
                         direction={{ base: 'row' }}

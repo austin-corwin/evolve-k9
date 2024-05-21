@@ -9,18 +9,19 @@ interface IAbout {
 const About: React.FC<IAbout> = ({ body }) => {
     return (
         <>
-            <Box id='about'>
+            <Box id='about' w='full'>
                 <Heading
                     // fontSize={{ base: 'md', lg: '3xl', xl: '4xl' }}
                     // fontSize={{ base: 'md', lg: '6xl', xl: '7xl' }}
                     fontSize={{ base: '4xl', lg: '6xl', xl: '7xl' }}
                     fontFamily='mont'
                     color='brandBlack.100'
+                    w='full'
                 >
                     <Box display='inline-block'>
                         Evolve K9:{' '}
                         <Text display='inline' color='brandGreen.300'>
-                            Embrace Choice & Control
+                            What We're About
                         </Text>{' '}
                     </Box>
                 </Heading>
