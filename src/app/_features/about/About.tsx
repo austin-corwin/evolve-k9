@@ -50,7 +50,7 @@ const About: React.FC<IAbout> = ({ body }) => {
                         rounded='xl'
                     >
                         <Image
-                            src='/assets/marcus-with-summit.jpg'
+                            src='/assets/marcusandsummit.jpg'
                             fill
                             style={{ objectFit: 'cover' }}
                             alt='Picture of marcus'

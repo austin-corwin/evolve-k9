@@ -17,9 +17,13 @@ const TrustedBrands: React.FC<ITrustedBrands> = () => {
             >
                 <Box display='inline-block'>{title}</Box>
             </Heading>
-            <Box className='flex'>
-                {logos.map((logo) => {
-                    return <Image key={logo} src={logo} width={100} height={100} alt='logo' />
+            <Box display='flex'>
+                {logos.map((logo, i) => {
+                    return (
+                        <Box mx={4}>
+                            <Image key={logo} src={logo} width={100} height={100} alt='logo' />
+                        </Box>
+                    )
                 })}
             </Box>
         </VStack>

@@ -159,6 +159,6 @@ export const homepageConfig = {
     },
     trustedBrands: {
         title: 'Trusted Brands',
-        logos: ['/assets/ecollarDealer.jpg'],
+        logos: ['/assets/ecollarDealer.jpg', '/assets/IACP-logo-cropped.png'],
     },
 }
