@@ -68,7 +68,6 @@ const Home = ({ homepageData }: { homepageData: any }) => {
             title={config?.about?.title!}
             bodyContent={config?.about.body!}
             imgSrc={config?.about?.image?.data?.attributes?.url!}
-            // imgSrc="/assets/marcus-with-summit.jpg"
           />
         </VStack>
       </Container>

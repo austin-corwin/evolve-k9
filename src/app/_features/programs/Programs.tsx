@@ -83,6 +83,31 @@ const Programs: React.FC<IPrograms> = ({
                 <Text>{body}</Text>
               </VStack>
             ))}
+            <Box rounded="xl" p={6} borderWidth={2} borderColor={"green"}>
+              <Text
+                w="full"
+                mb={4}
+                color="brandGreen.300"
+                fontSize="lg"
+                fontWeight="semibold"
+              >
+                Past or Current Clients Only:
+              </Text>
+              <VStack gap={6}>
+                {borderedItems?.map(({ title, body }) => (
+                  <VStack key={title} alignItems={"start"}>
+                    <Text
+                      color="brandOrange.300"
+                      fontSize="xl"
+                      fontWeight="semibold"
+                    >
+                      {title}
+                    </Text>
+                    <Text>{body}</Text>
+                  </VStack>
+                ))}
+              </VStack>
+            </Box>
           </VStack>
         </ProgramCard>
       </Stack>
