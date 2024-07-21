@@ -13,6 +13,7 @@ import Programs from "../_features/programs/Programs";
 import Testimonials from "../_features/testimonials/Testimonials";
 import useData from "../_state/stores/useData";
 import { IAttributes, IStrapiResponse } from "../_config/types/IStrapiResponse";
+import TrustedBrands from "../_features/trustedBrands/TrustedBrands";
 
 const auth = `cce16500cc2de2e4c1fe3afeb9d92c329666111d8910a719f09a14c39f4f486520e9aed6b9e5e0d6b4aeb7fef6acd79b26872d8c63dead5636cf42a22bd83b82f2adfb2434f7474db6cd50264c88f1e59776b6a2bbf10db81395828ef38aeb7cf6dbab9f2d38888bc7f1a06ea76d98679ec2729460f949031adabcaf1c277506`;
 
@@ -102,6 +103,7 @@ const Home = ({ homepageData }: { homepageData: any }) => {
           cta={config?.programs?.cta!}
         />
         <Testimonials body="test" />
+        <TrustedBrands />
       </Container>
     </Box>
   );

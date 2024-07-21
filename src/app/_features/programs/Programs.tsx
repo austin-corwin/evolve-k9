@@ -1,22 +1,7 @@
-import {
-  Box,
-  Button,
-  HStack,
-  Heading,
-  Icon,
-  Stack,
-  Text,
-  VStack,
-} from "@chakra-ui/react";
-import Image from "next/image";
+import { Box, Heading, Stack, Text, VStack } from "@chakra-ui/react";
+import { BookOpenIcon } from "@heroicons/react/16/solid";
 import React from "react";
-import {
-  HomeIcon,
-  AcademicCapIcon,
-  BookOpenIcon,
-} from "@heroicons/react/16/solid";
 import ProgramCard from "./ProgramCard";
-import { homepageConfig } from "@/app/_config/pages/homepageConfig";
 
 interface IPrograms {
   title: {

@@ -1,26 +1,12 @@
-import {
-    Box,
-    Button,
-    Container,
-    FormControl,
-    FormLabel,
-    HStack,
-    Heading,
-    Input,
-    Stack,
-    Text,
-    VStack,
-} from '@chakra-ui/react'
-import Image from 'next/image'
-import React from 'react'
 import { homepageConfig } from '@/app/_config/pages/homepageConfig'
-import { Rubik_Marker_Hatch } from 'next/font/google'
+import { Box, Container, Heading, Stack, Text, VStack } from '@chakra-ui/react'
+import React from 'react'
 import ContactForm from '../forms/ContactForm'
 
 interface IContact {}
 
 const Contact: React.FC<IContact> = () => {
-    const { title, subtitle, body, formFields } = homepageConfig.contact
+    const { title, subtitle, body } = homepageConfig.contact
     return (
         <Box py={16} px={{ md: 8 }} bg='brandBlack.300' w='full' mt={24}>
             <Container
