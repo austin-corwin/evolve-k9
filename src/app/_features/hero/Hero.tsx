@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Button, Container, Flex, Heading, Text } from "@chakra-ui/react";
+import Image from "next/image";
 
 interface IHero {
   title: string;
@@ -12,11 +13,10 @@ interface IHero {
 }
 
 const Hero: React.FC<IHero> = ({ title, subtitle, action = null, bgImage }) => {
-  console.log("bgimag", bgImage);
   return (
     <Box h="full">
       <Flex
-        bgImg={`http://localhost:1337/public${bgImage}`}
+        bgImg={`http://localhost:1337${bgImage}`}
         bgColor="rgb(51, 51, 51, 0.5)"
         bgPosition="center"
         bgSize="cover"
