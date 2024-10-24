@@ -27,7 +27,6 @@ Make sure you have the following installed:
 -   Server-side rendering (SSR) and static generation (SSG)
 -   API routes for server-side logic
 -   Full integration with [React](https://reactjs.org/)
--   Customizable layouts and dynamic routing
 -   Optimized performance with automatic static optimization
 
 ## Installation
