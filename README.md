@@ -10,8 +10,6 @@ This website was developed for a client who owns a dog training business, provid
 -   [Running the Project](#running-the-project)
 -   [Environment Variables](#environment-variables)
 -   [Folder Structure](#folder-structure)
--   [Contributing](#contributing)
--   [License](#license)
 
 ## Getting Started
 
@@ -37,8 +35,8 @@ Make sure you have the following installed:
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/your-username/your-nextjs-project.git
-    cd your-nextjs-project
+    git clone https://github.com/austin-corwin/evolve-k9.git
+    cd evolve-k9
     ```
 
 2. Install dependencies:
