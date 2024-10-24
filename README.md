@@ -8,7 +8,6 @@ This website was developed for a client who owns a dog training business, provid
 -   [Features](#features)
 -   [Installation](#installation)
 -   [Running the Project](#running-the-project)
--   [Environment Variables](#environment-variables)
 -   [Folder Structure](#folder-structure)
 
 ## Getting Started
