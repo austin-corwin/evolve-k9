@@ -9,6 +9,10 @@ const nextConfig = {
       value: process.env.NEXT_PUBLIC_APP_URL,
     },
   ],
+  env: {
+    NEXT_STRAPI_API_TOKEN: process.env.NEXT_STRAPI_API_TOKEN,
+    NEXT_STRAPI_HEADERS_AUTH_TOKEN: process.env.NEXT_STRAPI_HEADERS_AUTH_TOKEN
+  }
 };
 
 module.exports = nextConfig;

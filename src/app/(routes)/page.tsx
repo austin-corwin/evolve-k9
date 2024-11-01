@@ -15,7 +15,7 @@ import useData from "../_state/stores/useData";
 import { IAttributes, IStrapiResponse } from "../_config/types/IStrapiResponse";
 import TrustedBrands from "../_features/trustedBrands/TrustedBrands";
 
-const auth = `cce16500cc2de2e4c1fe3afeb9d92c329666111d8910a719f09a14c39f4f486520e9aed6b9e5e0d6b4aeb7fef6acd79b26872d8c63dead5636cf42a22bd83b82f2adfb2434f7474db6cd50264c88f1e59776b6a2bbf10db81395828ef38aeb7cf6dbab9f2d38888bc7f1a06ea76d98679ec2729460f949031adabcaf1c277506`;
+const auth = process.env.NEXT_STRAPI_API_TOKEN
 
 const Home = ({ homepageData }: { homepageData: any }) => {
   const data = useData((state) => state.data);
@@ -30,7 +30,7 @@ const Home = ({ homepageData }: { homepageData: any }) => {
         "http://localhost:1337/api/homepage?populate=deep",
         {
           headers: {
-            Authorization: `Bearer 90a6149c6f1a5a877ae6e0af77f265d57849849c4a5ad726993cbf5069072290845190fa856751a12ed30188b3a728e531a443150fd7f5dd84c189d6635f405d302a4fe4967ff875edb48dcb5657ab458696bfac27b6a97f421b71f1bc914fd4c60b3fd66231a1c1da875cc1f6d11f2aa506092f1e492f34192685e7e2dff111`,
+            Authorization: process.env.NEXT_STRAPI_HEADERS_AUTH_TOKEN,
           },
         }
       )
