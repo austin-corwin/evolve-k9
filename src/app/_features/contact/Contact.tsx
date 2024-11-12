@@ -6,16 +6,19 @@ import ContactForm from '../forms/ContactForm'
 interface IContact {}
 
 const Contact: React.FC<IContact> = () => {
-    const { title, subtitle, body } = homepageConfig.contact
+    const { subtitle, body } = homepageConfig.contact
     return (
-        <Box py={16} px={{ md: 8 }} bg='brandBlack.300' w='full' mt={24}>
+        <Box pt={0} px={{ md: 8 }} bg='brandBlack.300' w='full' mt={{ lg: 28 }}>
             <Container
                 display='flex'
                 maxW={{ base: 500, md: 800, lg: 1000, xl: 1280 }}
-                my={{ base: 8, lg: 24 }}
+                mt={{ base: 10, lg: 24 }}
+                mb={{ base: 4, lg: 24 }}
                 flexDirection='column'
                 gap={24}
                 px={{ base: 6, lg: 4 }}
+                pt={{ base: 6, lg: 24 }}
+                pb={{ base: 10, lg: 28 }}
             >
                 <Stack
                     justifyContent={{ md: 'space-between' }}
@@ -25,12 +28,17 @@ const Contact: React.FC<IContact> = () => {
                 >
                     <VStack h='full' alignItems='start' justifyContent='start'>
                         <Heading
-                            as='h2'
-                            fontSize={{ base: '2xl', lg: '3xl', xl: '4xl' }}
+                            fontSize={{ base: '4xl', lg: '6xl', xl: '7xl' }}
                             fontFamily='mont'
                             color='brandTan.300'
+                            w='full'
                         >
-                            {title}
+                            <Box display='inline-block'>
+                                Contact{' '}
+                                <Text display='inline' color='brandGreen.300'>
+                                    Us
+                                </Text>{' '}
+                            </Box>
                         </Heading>
                         <Text color='brandTan.300'>{subtitle}</Text>
                         {body.map(({ text, title }) => (

@@ -1,15 +1,4 @@
-import {
-    Card,
-    CardFooter,
-    Box,
-    Stack,
-    CardBody,
-    Heading,
-    Text,
-    Button,
-    Icon,
-} from '@chakra-ui/react'
-import Image from 'next/image'
+import { Card, CardFooter, Box, Stack, CardBody, Heading, Button, Icon } from '@chakra-ui/react'
 import React from 'react'
 
 interface ICard {
@@ -50,7 +39,7 @@ const ProgramCard: React.FC<ICard> = ({ icon, title, children, action }) => {
             </Box>
             <Stack>
                 <CardBody px={0} pt={0}>
-                    <Heading color='brandBlack.300' size='xl'>
+                    <Heading color='brandBlack.300' size={{ base: 'lg', lg: 'xl' }}>
                         {title}
                     </Heading>
                     <Box py='2'>{children}</Box>

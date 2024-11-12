@@ -16,7 +16,7 @@ export const homepageConfig = {
     },
     contact: {
         title: 'Reach out and take the first step towards empowering your dog to make better decisions for themselves! ',
-        subtitle: `Leave us your information and we'll reach out to schedule a phone call consultation within 48 hours. For direct assistance, please call us at (970) 235-8466. We're available during business hours to address your questions and concerns.`,
+        subtitle: `Leave us your information by completing the form below and we'll reach out to schedule a phone call consultation within 48 hours. Our team is committed to responding to your inquiries promptly and providing the information you need. For direct assistance, please call us at (970) 235-8466. We're available during business hours to address your questions and concerns.`,
         body: [
             // {
             //     title: 'Contact Evolve K9 LLC – Where we empower clients to train like the pros! ',

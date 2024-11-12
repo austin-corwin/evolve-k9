@@ -1,9 +1,8 @@
-import { Box, Button, HStack, Heading, Icon, Stack, Text, VStack } from '@chakra-ui/react'
-import Image from 'next/image'
-import React from 'react'
-import { HomeIcon, AcademicCapIcon, BookOpenIcon } from '@heroicons/react/16/solid'
-import ProgramCard from './ProgramCard'
 import { homepageConfig } from '@/app/_config/pages/homepageConfig'
+import { Box, Heading, Stack, Text, VStack } from '@chakra-ui/react'
+import { BookOpenIcon } from '@heroicons/react/16/solid'
+import React from 'react'
+import ProgramCard from './ProgramCard'
 
 interface IPrograms {}
 
@@ -12,7 +11,7 @@ const Programs: React.FC<IPrograms> = () => {
     return (
         <Stack
             px={{ base: 2, md: 'auto' }}
-            gap={{ base: 8, md: 16 }}
+            gap={{ base: 4, md: 16 }}
             w='full'
             flexDirection={{ base: 'column' }}
             id='programs'

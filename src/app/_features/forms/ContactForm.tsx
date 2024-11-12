@@ -8,6 +8,7 @@ import {
     FormLabel,
     HStack,
     Input,
+    Stack,
     Text,
     Textarea,
     VStack,
@@ -52,7 +53,12 @@ const ContactForm: React.FC = () => {
                 </Box>
                 {formFields.map((section) => {
                     return (
-                        <HStack gap={{ base: 2, lg: 6 }} key={Math.random()} w='full'>
+                        <Stack
+                            flexDirection={{ base: 'column', md: 'row' }}
+                            gap={{ base: 2, lg: 6 }}
+                            key={Math.random()}
+                            w='full'
+                        >
                             {section.map((field) => {
                                 const { label, ...fieldProps } = field
                                 return (
@@ -66,7 +72,7 @@ const ContactForm: React.FC = () => {
                                     </FormControl>
                                 )
                             })}
-                        </HStack>
+                        </Stack>
                     )
                 })}
                 <HStack gap={{ base: 2, lg: 6 }} key={Math.random()} w='full'>
