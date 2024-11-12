@@ -11,29 +11,28 @@ export const homepageConfig = {
     about: {
         body: [
             `Welcome to Evolve K9!  We are dedicated to empowering dogs to make good choices for themselves. Through our training programs, we instill decision-making skills that promote independence, confidence, and a stronger connection between dogs and their owners. Recognizing the importance of a cooperative partnership, our training methods provide owners with the control needed to guide and shape their dog's behavior. `,
-            `This empowerment leads to clear communication, well-defined boundaries, and a solid foundation for a harmonious relationship. We specialize in providing clients the skills and knowledge needed to live a harmonious life with their dogs. We simplify the training journey through a holistic approach that includes relationship, freedom, confidence, basic and advanced obedience, as well as targeted behavioral modification.`,
+            `This empowerment leads to clear communication, well-defined boundaries, and a solid foundation for a harmonious relationship. We specialize in providing clients the skills and knowledge needed to live a harmonious life with their dogs. We simplify the training journey through a holistic approach that includes relationship, freedom, confidence, basic and advanced obedience, as well as targeted behavioral modification. Our team is committed to responding to your inquiries promptly and providing the information you need.`,
         ],
     },
     contact: {
         title: 'Reach out and take the first step towards empowering your dog to make better decisions for themselves! ',
-        subtitle: `Leave us your information and we'll reach out to schedule a phone call consultation within 48 hours.`,
+        subtitle: `Leave us your information and we'll reach out to schedule a phone call consultation within 48 hours. For direct assistance, please call us at (970) 235-8466. We're available during business hours to address your questions and concerns.`,
         body: [
-            {
-                title: 'Contact Evolve K9 LLC – Where we empower clients to train like the pros! ',
-                text: `Welcome to Evolve K9, where your canine companions are our top priority. Whether you're seeking information about our specialized training programs, have inquiries about our services, or wish to collaborate, our team is here to assist you.
-                `,
-            },
-            {
-                title: 'How to Reach Us:',
-            },
-            {
-                title: 'Contact Form',
-                text: `Complete the form below to get in touch with us. Our team is committed to responding to your inquiries promptly and providing the information you need.`,
-            },
-            {
-                title: 'Phone',
-                text: `For direct assistance, please call us at (970) 235-8466. We're available during business hours to address your questions and concerns.`,
-            },
+            // {
+            //     title: 'Contact Evolve K9 LLC – Where we empower clients to train like the pros! ',
+            //     text: `Welcome to Evolve K9, where your canine companions are our top priority. Whether you're seeking information about our specialized training programs, have inquiries about our services, or wish to collaborate, our team is here to assist you. Our team is committed to responding to your inquiries promptly and providing the information you need.`,
+            // },
+            // {
+            //     title: 'How to Reach Us:',
+            // },
+            // {
+            //     title: 'Contact Form',
+            //     text: `Complete the form below to get in touch with us. Our team is committed to responding to your inquiries promptly and providing the information you need.`,
+            // },
+            // {
+            //     title: 'Phone',
+            //     text: `For direct assistance, please call us at (970) 235-8466. We're available during business hours to address your questions and concerns.`,
+            // },
         ],
         formFields: [
             [

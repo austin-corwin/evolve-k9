@@ -19,7 +19,7 @@ const Contact: React.FC<IContact> = () => {
             >
                 <Stack
                     justifyContent={{ md: 'space-between' }}
-                    direction={{ base: 'column', lg: 'row' }}
+                    direction={{ base: 'column' }}
                     gap={{ base: 8, lg: 16 }}
                     alignItems='center'
                 >
