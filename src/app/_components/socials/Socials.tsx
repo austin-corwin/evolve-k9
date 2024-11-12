@@ -10,13 +10,13 @@ const Socials: React.FC<ISocials> = () => {
     return (
         <HStack>
             <InstagramIcon />
-            <Link display='flex' alignItems='center' href='mailto:marcus.chapman@evolvek9.com'>
-                <Icon
-                    color='brandTan.300'
-                    boxSize={6}
-                    as={EnvelopeIcon}
-                    aria-label='Email evolve k9'
-                />
+            <Link
+                display='flex'
+                alignItems='center'
+                href='mailto:marcus.chapman@evolvek9.com'
+                aria-label='Email evolve K9'
+            >
+                <Icon color='brandTan.300' boxSize={6} as={EnvelopeIcon} />
             </Link>
             <FacebookIcon />
         </HStack>

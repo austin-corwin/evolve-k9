@@ -9,6 +9,7 @@ const FacebookIcon: React.FC<IFacebookIcon> = () => {
             display='flex'
             alignItems='center'
             href='https://www.facebook.com/profile.php?id=61557243442278'
+            aria-label="View evolve K9's Facebook"
         >
             <svg
                 fill='#FFF5D2'

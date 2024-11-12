@@ -5,7 +5,10 @@ interface IInstagramIcon {}
 
 const InstagramIcon: React.FC<IInstagramIcon> = () => {
     return (
-        <Link href='https://www.instagram.com/evolvek9training/'>
+        <Link
+            href='https://www.instagram.com/evolvek9training/'
+            aria-label='View evolve K9 instagram'
+        >
             <svg
                 fill='#FFF5D2'
                 xmlns='http://www.w3.org/2000/svg'
