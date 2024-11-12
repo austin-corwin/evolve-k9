@@ -1,6 +1,6 @@
 import Socials from '@/app/_components/socials/Socials'
 import { Link } from '@chakra-ui/next-js'
-import { Box, Button, Flex, HStack, Icon, IconButton, Stack, Text, VStack } from '@chakra-ui/react'
+import { Box, Button, Flex, HStack, Stack, Text, VStack } from '@chakra-ui/react'
 import Image from 'next/image'
 import React from 'react'
 

@@ -20,7 +20,7 @@ const MainNavDrawer: React.FC<IMainNavDrawer> = () => {
         <Drawer isOpen={isOpen} placement='right' onClose={() => setIsOpen(false)}>
             <DrawerOverlay />
             <DrawerContent>
-                <Box h='full' bg='#FFF5D2'>
+                <Box data-testid='mobile-menu-drawer' h='full' bg='#FFF5D2'>
                     <DrawerCloseButton />
                     <DrawerBody pt={8}>
                         <VStack

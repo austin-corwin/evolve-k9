@@ -46,10 +46,10 @@ const Home = () => {
                 display='flex'
                 maxW={{ base: 500, md: 800, lg: 1000, xl: 1280 }}
                 bg='brandTan.300'
-                mt={{ base: 16, lg: 24 }}
+                mt={{ lg: 24 }}
                 flexDirection='column'
-                gap={24}
-                pb={24}
+                gap={{ base: 14, lg: 48 }}
+                pb={{ base: 10, lg: 24 }}
             >
                 <Programs />
                 <Testimonials body='test' />

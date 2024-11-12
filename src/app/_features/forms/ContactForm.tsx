@@ -1,4 +1,5 @@
 import { homepageConfig } from '@/app/_config/pages/homepageConfig'
+import { submitContactForm } from '@/app/_utils/forms'
 import {
     Box,
     Button,
@@ -7,43 +8,24 @@ import {
     FormLabel,
     HStack,
     Input,
+    Stack,
     Text,
+    Textarea,
     VStack,
     useToast,
 } from '@chakra-ui/react'
 import Image from 'next/image'
 import React from 'react'
 
-interface IContactForm {}
-
-const ContactForm: React.FC<IContactForm> = () => {
+const ContactForm: React.FC = () => {
     const { formFields } = homepageConfig.contact
     const [loading, setLoading] = React.useState(false)
     const addToast = useToast({
         position: 'bottom',
     })
-    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    const handleSubmitContactForm = async (e: React.FormEvent<HTMLFormElement>) => {
         setLoading(true)
-        e.preventDefault()
-        const formData = {
-            first_name: (e as any).target?.[0].value,
-            last_name: (e as any).target?.[1].value,
-            zip_code: (e as any).target?.[2].value,
-            area_of_interest: (e as any).target?.[3].value,
-            email: (e as any).target?.[4].value,
-            phone_number: (e as any).target?.[5].value,
-            opt_in: (e as any).target?.[6].checked,
-        }
-        const response = await fetch('/api', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': '*',
-                'Access-Control-Allow-Credentials': 'true',
-            },
-            body: JSON.stringify(formData),
-        })
-        const content = await response.json()
+        const content = await submitContactForm(e)
         const { success } = content
         if (success)
             addToast({
@@ -57,7 +39,7 @@ const ContactForm: React.FC<IContactForm> = () => {
     }
 
     return (
-        <form onSubmit={handleSubmit} name='contact' method='POST'>
+        <form onSubmit={handleSubmitContactForm} name='contact' method='POST'>
             <VStack
                 shadow='xl'
                 gap={{ base: 2, lg: 6 }}
@@ -71,17 +53,26 @@ const ContactForm: React.FC<IContactForm> = () => {
                 </Box>
                 {formFields.map((section) => {
                     return (
-                        <HStack gap={{ base: 2, lg: 6 }} key={Math.random()} w='full'>
+                        <Stack
+                            flexDirection={{ base: 'column', md: 'row' }}
+                            gap={{ base: 2, lg: 6 }}
+                            key={Math.random()}
+                            w='full'
+                        >
                             {section.map((field) => {
                                 const { label, ...fieldProps } = field
                                 return (
                                     <FormControl key={label} isRequired={fieldProps.required}>
                                         <FormLabel>{label}</FormLabel>
-                                        <Input {...fieldProps} />
+                                        {fieldProps.type === 'textarea' ? (
+                                            <Textarea {...fieldProps} />
+                                        ) : (
+                                            <Input {...fieldProps} />
+                                        )}
                                     </FormControl>
                                 )
                             })}
-                        </HStack>
+                        </Stack>
                     )
                 })}
                 <HStack gap={{ base: 2, lg: 6 }} key={Math.random()} w='full'>
@@ -116,9 +107,11 @@ const ContactForm: React.FC<IContactForm> = () => {
                 >
                     Submit
                 </Button>
-                <Text fontSize='xs' color='brandBlack.300'>
-                    {homepageConfig.contact.disclaimer}
-                </Text>
+                {homepageConfig?.contact?.disclaimer && (
+                    <Text fontSize='xs' color='brandBlack.300'>
+                        {homepageConfig.contact.disclaimer}
+                    </Text>
+                )}
             </VStack>
         </form>
     )

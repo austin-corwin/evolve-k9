@@ -26,15 +26,10 @@ const About: React.FC<IAbout> = ({ body }) => {
                     </Box>
                 </Heading>
             </Box>
-            <Stack gap={16} w='full' flexDirection={{ base: 'column', lg: 'row' }}>
+            <Stack gap={{ base: 8, lg: 16 }} w='full' flexDirection={{ base: 'column', lg: 'row' }}>
                 <VStack gap={4} justifyContent='start' alignItems='start'>
                     {body.map((paragraph, index) => (
-                        <Text
-                            key={index}
-                            color='brandBlack.300'
-                            fontWeight='medium'
-                            fontSize={{ xl: '2xl' }}
-                        >
+                        <Text key={index} color='brandBlack.300'>
                             {paragraph}
                         </Text>
                     ))}
