@@ -88,6 +88,32 @@ export const homepageConfig = {
                     name: 'phone_number',
                 },
             ],
+            [
+                {
+                    label: `Dog's Name`,
+                    type: 'text',
+                    placeholder: `Enter your dog's name`,
+                    required: true,
+                    name: 'dogs_name',
+                },
+                {
+                    label: `Dog's Age`,
+                    type: 'text',
+                    placeholder: `Enter your dog's age`,
+                    required: true,
+                    name: 'dogs_age',
+                },
+            ],
+            [
+                {
+                    label: 'Additional information',
+                    type: 'textarea',
+                    placeholder:
+                        'Tell us more! Where did you get your dog? How did you hear about us?',
+                    required: true,
+                    name: 'additional_information',
+                },
+            ],
         ],
         disclaimer: `By submitting this form, you opt-in to receive SMS communications from the Evolve K9 team, Opt-out anytime by replying STOP`,
     },
