@@ -1,6 +1,6 @@
 # Evolve K9
 
-This website was developed for a client who owns a dog training business, providing them with a streamlined platform to promote their services and capture leads for dog training programs. The client requested a simple, no-frills design focused on functionality. A form was requested so that the client could collect leads. The form integrates with Google APIs to seamlessly send submissions to both their email inbox and a Google Sheet for easy lead management.
+[evolvek9training.com](https://evolvek9training.com/) was developed for a client who owns a dog training business, providing them with a streamlined platform to promote their services and capture leads for dog training programs. The client requested a simple, no-frills design focused on functionality. A form was requested so that the client could collect leads. The form integrates with Google APIs to seamlessly send submissions to both their email inbox and a Google Sheet for easy lead management.
 
 ## Table of Contents
 
