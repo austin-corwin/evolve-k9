@@ -20,7 +20,7 @@ const TrustedBrands: React.FC<ITrustedBrands> = () => {
             <Box display='flex'>
                 {logos.map((logo, i) => {
                     return (
-                        <Box mx={4}>
+                        <Box key={logo} mx={4}>
                             <Image key={logo} src={logo} width={100} height={100} alt='logo' />
                         </Box>
                     )

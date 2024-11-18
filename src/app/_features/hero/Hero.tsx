@@ -68,6 +68,7 @@ const Hero: React.FC<IHero> = ({ title, subtitle, action = null }) => {
                                 variant='primary'
                                 as='a'
                                 href={action.href}
+                                data-testid='hero-action'
                             >
                                 <Text ml={2}>{action.label}</Text>
                             </Button>
