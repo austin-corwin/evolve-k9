@@ -122,7 +122,7 @@ export const homepageConfig = {
         items: [
             {
                 title: 'Evolved Private Training',
-                body: `Jump into a personalized training journey, where we not only transform your dog but YOU as well! With 12 private lessons, covering basic and advanced obedience, including off-leash reliability and behavioral modification for ALL issues including aggression and anxiety. Our program includes Relationship Repair, where we help guide you on your journey to redefining your relationship with your dog. Automatic access to Evolve For Life, where you will receive lessons for life and unlimited support!`,
+                body: `Jump into a personalized training journey, where we not only transform your dog but YOU as well! With 10 private lessons, covering basic and advanced obedience, including off-leash reliability and behavioral modification for ALL issues including aggression and anxiety. Our program includes Relationship Repair, where we help guide you on your journey to redefining your relationship with your dog. Automatic access to Evolve For Life, where you will receive lessons for life and unlimited support!`,
             },
             {
                 title: 'Evolved Essentials',
@@ -143,7 +143,7 @@ export const homepageConfig = {
                 body: `Discover a superior alternative to traditional doggie day care with Evolved Day Camp. Our program offers a full day of care designed to enrich your dog's life through training, socialization, and confidence building. At Evolved Day Camp, your dog will enjoy a balanced mix of fun and learning in a safe and engaging environment. Providing training tune-ups to reinforce good behavior and address any minor issues, ensuring your dog maintains their best manners. Your dog will have the opportunity to interact with other dogs, helping them develop essential social skills. We focus on creating positive experiences that boost your dog's confidence and overall well-being.`,
             },
             {
-                title: 'Backcountry Day Camp',
+                title: 'Backcountry Day Camp - On Hold Until Spring 2025',
                 body: `Backcountry Day Camp, where your dog can embrace the great outdoors in the Rocky Mountains! Our full-day camp offers a unique opportunity for dogs to experience the freedom and excitement of the wilderness, all while enhancing essential skills for everyday life. During Backcountry Day Camp, we harness the power of pack drive to foster better engagement and build your dog's confidence in a natural, stimulating environment. Your dog will enjoy plenty of socialization, play, and exploration with other canine companions, ensuring they return home happy and fulfilled. This day camp is designed to let your dog be a dog while continuing their growth and development.`,
             },
         ],
