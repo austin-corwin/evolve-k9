@@ -154,31 +154,39 @@ export const homepageConfig = {
     },
     testimonials: {
         title: 'Testimonials',
+        link: 'https://www.google.com/search?q=evolve+k9+training&oq=evolve+k9+training&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgYIARBFGDwyBggCEEUYPTIGCAMQRRg80gEIMjY1M2owajGoAgCwAgA&sourceid=chrome&ie=UTF-8#lrd=0x885fd4dcc9a9c63f:0x8e83b8c925cff196,1,,,,',
         items: [
             {
                 rating: 5,
-                body: `Marcus is INCREDIBLE!! He is an absolute natural & such an incredible trainer. Not only has he helped my very anxious Golden become more confident, but he has also trained both my sister's two dogs and my moms because he's THAT good!
-                You will not regret working with Marcus. He has a passion that is unmatched & is incredible at not only training/helping your dog(s) but also helping you (the owner) build a positive connection & learn how to effectively communicate with your dog!`,
-                author: 'Karlee T.',
-            },
-            {
-                rating: 5,
-                body: `I cannot recommend Evolve K9 enough! Our pup had some behavioral issues that we were struggling to address, I'd tried everything on the internet but it didn't get us very far. But with the expertise of Marcus, balance has been restored to our lives and our dog has never been happier. Marcus took the time to understand our dogs unique personality and our training goals to curate the perfect training methods. What I appreciate most is that our dog is not only more obedient, but he is 200% more calm and through the help of Evolve K9 we've built a trusting relationship.
+                body: `Hands down the best dog trainer ever. My wife and I decided to sign up for the Evolved Private Training package for our newly adopted rescue who was completely untrained and had some severe signs of general and separation anxiety pretty early on. Marcus helped us navigate the steps to getting our new dog to a state where she fits into our lives.
 
-                We're incredibly grateful for the positive impact Marcus had on our dog's life, and we wholeheartedly recommend them to anyone in need of top-notch training services.`,
-                author: 'Kayla W.',
-            },
-            {
-                rating: 5,
-                body: `Marcus at EvolveK9 has been working with my border collie Lilly for years. He took her from scared, reactive, and insecure to confident, trusting, and more social. Her quality of life has gone up due to the work Marcus put in with her. I have him to thank for my life long dog best friend. I highly recommend if you want someone professional, knowledgeable and transparent with his approach. You’re dog will be glad you choose Evolve!!`,
-                author: 'Benjamin W.',
-            },
-            {
-                rating: 5,
-                body: `My husband and I HIGHLY recommend Marcus for all of your dog training needs!
+Before we met Marcus, our dog would tremble and cower from any stranger, not listen to anything we said, and often would scream if we left her alone. After completing the evolved private training package our dog now knows how to sit, place, down, recall, heel, and settle herself when alone. Marcus has spent countless hours with us via lesson, texting and calling us to talk through how best to address issues we are experiencing, and really prioritize our training goals. His approach really connected with us and our dog, he showed that he was willing to do whatever it took to meet our training goals and have our dog fit into our lives.
 
-                Marcus is a great teacher, communicator, professional, and truly cares about your pup. You will not go wrong with Evolve K9!`,
-                author: 'Tyler W.',
+I also think his rates are a phenomenally good deal. He not only provides the lessons as advertised but works with you to ensure you get the equipment you need to accomplish your training goals, even if he has to loan you equipment or go out of his way to make adjustments. I would have paid him more in a heartbeat if he asked.
+
+I would hands down go with Marcus for making your pup fit into your life and be happy while doing it.`,
+                author: 'Darius D.',
+            },
+            {
+                rating: 5,
+                body: `If I could leave a 10 star review I would. I'm writing this review for Marcus and the amazing job he has done and continues to do for our beautiful girl Suki and for my wife and I also. We did the 2 week board and train program with Marcus because our girl was a very anxious rescue. We could see that she had a lot of potential, but we didn't know how to get the most out of her. Our goal wasn't that we wanted her to just learn to obey and respect us, but to know that she is part of our family and that we just want to communicate with her so she can be safe and so we can also be able to have a good and mutually respectful relationship with her. Marcus 100% delivered on all of it helping us to achieve our goal. Our amazing girl is living up to the potential we saw in her and we also as her family have learned how to navigate having her do what we need her to do while also having a fun time with our girl. All of this thanks to Marcus and his very open communication and feedback for us. Don't be fooled by the smaller amount of reviews his business seems to have, he is a seasoned veteran in this area and I will always recommend him. Thank you! See you soon Marcus.`,
+                author: 'Jose M.',
+            },
+            {
+                rating: 5,
+                body: `We worked with Marcus in the summer of 2023, and it was such a game-changer for both Watson (our pup) and us. Marcus has this amazing ability to look at the whole picture—helping with not just training but creating a toolkit for you and your dog to actually communicate in a way that makes sense. It’s not just about commands—it’s about building a real connection.
+
+Over a year later, Watson had a health issue, and I wasn’t sure if that would change how we’d been working together. I reached out to Marcus, and he jumped right in. He genuinely cared and wanted to help us navigate the situation. His advice and encouragement reminded me why he’s so great at what he does—he’s not just about training, he’s about making sure you and your dog thrive.
+
+If your dog deals with anxiety, separation anxiety, defensiveness, or aggression, or if you’re just looking to feel more confident with your pup, Marcus is your guy. He knows so much, and if there’s something he’s not sure of, he’ll dig into his resources to find answers. Thanks to him, we’ve been able to take Watson to friends’ houses and even breweries again, which felt impossible before.
+
+Marcus is just the best—kind, knowledgeable, and so easy to work with. If you’re thinking about getting help with your dog, seriously, don’t wait. Call Evolve K9 Training. You won’t regret it!`,
+                author: 'Dylan S.',
+            },
+            {
+                rating: 5,
+                body: `An unexpected life event provided me with 2 dogs to join my one older small pup. I was in no way prepared to take on 2 young, medium to large dogs and felt overwhelmed every day. Someone referred me to Marcus, and it literally changed my life. I have had dog trainers before (not with these dogs) and somehow it really didn't stick. Marcus is thoughtful and takes the time, to give me what I need to make sure my dog Zen was able to keep all his good learned habits. He now walks perfectly at heel, stops when I say, and does not react to dogs or squirrels. A first! He goes into his kennel, understands and does "place" when I need him to. I cannot stay enough good things. Marcus is everything a trainer should be, and I am so grateful to him`,
+                author: 'Kat C.',
             },
         ],
     },
