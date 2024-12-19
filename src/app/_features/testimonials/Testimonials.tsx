@@ -9,7 +9,7 @@ interface ITestimonials {
 }
 
 const Testimonials: React.FC<ITestimonials> = () => {
-    const { title, items } = homepageConfig.testimonials
+    const { title, items, link } = homepageConfig.testimonials
     return (
         <VStack alignItems='start' display='flex' gap={{ base: 8 }} px={{ base: 2, lg: 0 }}>
             <Box>
@@ -45,6 +45,13 @@ const Testimonials: React.FC<ITestimonials> = () => {
                     </VStack>
                 ))}
             </Stack>
+            {link && (
+                <VStack w='full'>
+                    <Button as='a' target='_blank' href={link} variant='primary'>
+                        See More
+                    </Button>
+                </VStack>
+            )}
         </VStack>
     )
 }

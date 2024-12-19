@@ -75,23 +75,6 @@ const ContactForm: React.FC = () => {
                         </Stack>
                     )
                 })}
-                <HStack gap={{ base: 2, lg: 6 }} key={Math.random()} w='full'>
-                    <FormControl
-                        display='flex'
-                        flexDirection='row'
-                        alignItems='start'
-                        key={'checkDisclaimer'}
-                        isRequired={true}
-                        gap={{ base: 2 }}
-                    >
-                        <Checkbox w='auto' variant='dark' mt={1} name='opt_in' />
-                        <FormLabel mb={0}>
-                            By checking this box, you opt-in to receive SMS communications from the
-                            Evolve K9 team, Opt-out anytime by replying STOP
-                        </FormLabel>
-                    </FormControl>
-                </HStack>
-
                 <Button
                     mt={2}
                     type='submit'
