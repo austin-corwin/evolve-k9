@@ -150,7 +150,7 @@ const Testimonials: React.FC<ITestimonials> = () => {
                             fontFamily='mont'
                             fontSize={{ base: 'md', lg: 'lg' }}
                         >
-                            {activeItem.body}
+                            {activeItem.body.substring(0, 500)}
                         </Text>
                         <Text> - {activeItem.author}</Text>
                     </React.Fragment>
