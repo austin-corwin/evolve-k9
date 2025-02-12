@@ -48,11 +48,13 @@ const Testimonials: React.FC<ITestimonials> = () => {
                     if (activeIndex > items.length - 2) {
                         return
                     } else {
+                        setTruncatedString(true)
                         dispatch({ value: 'increment' })
                     }
                     break
 
                 case 'decrement':
+                    setTruncatedString(true)
                     dispatch({ value: 'decrement' })
 
                 default:
@@ -61,6 +63,7 @@ const Testimonials: React.FC<ITestimonials> = () => {
         },
         [activeIndex],
     )
+    const [truncatedString, setTruncatedString] = React.useState(true)
     return (
         <VStack alignItems='start' display='flex' gap={{ base: 8 }} px={{ base: 2, lg: 0 }}>
             <Box display='flex' w='full' justifyContent='space-between'>
@@ -72,7 +75,7 @@ const Testimonials: React.FC<ITestimonials> = () => {
                 >
                     <Box display='inline-block'>{title}</Box>
                 </Heading>
-                <Box alignItems={'center'} display='flex' gap={3}>
+                <Box alignItems={'center'} display='flex' gap={{ base: 1, md: 3 }}>
                     <Button
                         onClick={() => handleIncrement('decrement')}
                         w='50px'
@@ -136,22 +139,72 @@ const Testimonials: React.FC<ITestimonials> = () => {
                 </Box>
             </Box>
             <Stack gap={{ base: 16, lg: 20 }} w='full' flexDirection={{ base: 'column' }}>
-                <VStack key={activeItem.body} gap={{ base: 4, lg: 8 }} w='full'>
+                <VStack key={activeItem.body} gap={{ base: 4, lg: 8 }} position='relative' w='full'>
                     <React.Fragment key={activeItem.body}>
-                        <HStack>
-                            {Array.from({ length: activeItem.rating }).map((_) => (
-                                <Icon key={Math.random()} as={StarIcon} boxSize={8} />
-                            ))}
-                        </HStack>
+                        {/* <Box
+                            display='flex'
+                            alignItems={'start'}
+                            position='absolute'
+                            fontSize='16rem'
+                            left='0'
+                            top='-8rem'
+                        >
+                            "
+                        </Box> */}
                         <Text
                             color='brandBlack.300'
-                            align='center'
+                            align='left'
                             fontWeight='medium'
                             fontFamily='mont'
                             fontSize={{ base: 'md', lg: 'lg' }}
                         >
-                            {activeItem.body.substring(0, 500)}
+                            <span
+                                style={{
+                                    fontSize: '12rem',
+                                    lineHeight: '0',
+                                    position: 'relative',
+                                    top: '4rem',
+                                    transform: 'rotate(10deg)',
+                                    display: 'inline-block',
+                                }}
+                            >
+                                "
+                            </span>
+                            {truncatedString ? activeItem.body.substring(0, 500) : activeItem.body}
+                            {truncatedString ? '...' : ''}
+                            {truncatedString ? (
+                                <Button
+                                    p={0}
+                                    bg='none'
+                                    fontWeight='bold'
+                                    border='none'
+                                    onClick={() => setTruncatedString(false)}
+                                    ml={2}
+                                    mb={0.5}
+                                    _hover={{ background: 'none' }}
+                                >
+                                    See all
+                                </Button>
+                            ) : (
+                                <Button
+                                    p={0}
+                                    bg='none'
+                                    fontWeight='bold'
+                                    border='none'
+                                    onClick={() => setTruncatedString(true)}
+                                    ml={2}
+                                    mb={0.5}
+                                    _hover={{ background: 'none' }}
+                                >
+                                    See less
+                                </Button>
+                            )}
                         </Text>
+                        <HStack>
+                            {Array.from({ length: activeItem.rating }).map((_) => (
+                                <Icon key={Math.random()} as={StarIcon} boxSize={6} />
+                            ))}
+                        </HStack>
                         <Text> - {activeItem.author}</Text>
                     </React.Fragment>
                 </VStack>
