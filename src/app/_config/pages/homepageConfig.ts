@@ -158,6 +158,19 @@ export const homepageConfig = {
         items: [
             {
                 rating: 5,
+                body: `Working with Marcus has been the best dog training experience we have ever had!
+
+Our dog Lily, who we adopted as a 2.5 year old, has had anxiety and fear towards humans since we got her. As she has gotten older, her reactivity worsened and culminated to multiple bite attempts. After researching multiple dog training companies, we came across Marcus. From the beginning, Marcus was kind, professional, and showed full faith in being able to work with us on this horrible situation!
+
+We completed an intensive 10 week one on one training with Marcus and Lily has basically become a different dog!! Working with Marcus is SO easy - he is accessible and always asks us to text him any questions, give updates, etc, and he is so responsive, and flexible to rescheduling. He is also kind and understanding of our questions and fears as owners of a reactive dog, and has had full faith in Lily this entire process.
+
+He is extremely knowledgeable of dog training methods and dog behavior/psychology. He explains the why and works with you so you really understand each step, and how they build on each other. His training program is comprehensive and intensive, and he provides support and resources every step of the way. We were able to work on things like “state of mind”, place, muzzle training, heeling on leash, and so much more.
+
+because of this we were able to address lilys dangerous behaviors. This has given us such peace of mind as anxious dog owners. We can now walk/run with Lily safely, take her into stores, and have her around when new people come to visit. We are SO lucky to have found Marcus and can’t wait to keep working with him!!`,
+                author: 'Megan E.',
+            },
+            {
+                rating: 5,
                 body: `Hands down the best dog trainer ever. My wife and I decided to sign up for the Evolved Private Training package for our newly adopted rescue who was completely untrained and had some severe signs of general and separation anxiety pretty early on. Marcus helped us navigate the steps to getting our new dog to a state where she fits into our lives.
 
 Before we met Marcus, our dog would tremble and cower from any stranger, not listen to anything we said, and often would scream if we left her alone. After completing the evolved private training package our dog now knows how to sit, place, down, recall, heel, and settle herself when alone. Marcus has spent countless hours with us via lesson, texting and calling us to talk through how best to address issues we are experiencing, and really prioritize our training goals. His approach really connected with us and our dog, he showed that he was willing to do whatever it took to meet our training goals and have our dog fit into our lives.
