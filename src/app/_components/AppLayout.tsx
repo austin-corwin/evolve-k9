@@ -2,7 +2,7 @@
 import { fonts } from '@/app/_config/fonts'
 import Footer from '@/app/_features/footer/Footer'
 import { Providers } from '@/app/providers'
-import { GoogleAnalytics } from '@next/third-parties/google'
+import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google'
 import React from 'react'
 import { Navbar } from './Navbar'
 import MainNavDrawer from './navigation/MainNavDrawer'
@@ -26,6 +26,7 @@ const AppLayout: React.FC<IAppLayout> = ({ children }) => {
                 </Providers>
             </body>
             <GoogleAnalytics gaId='G-Q34G8B7T77' />
+            <GoogleTagManager gtmId='GTM-NJTJJTMV' />
         </html>
     )
 }
