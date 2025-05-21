@@ -1,12 +1,17 @@
-import { Box, Button, Heading, Stack, Text, VStack } from '@chakra-ui/react'
+import { Box, Button, Heading, HStack, Stack, Text, VStack } from '@chakra-ui/react'
 import Image from 'next/image'
 import React from 'react'
 
 interface IAbout {
     body: string[]
+    certifications: {
+        label: string
+        href: string
+    }[]
+    imgSrc: string
 }
 
-const About: React.FC<IAbout> = ({ body }) => {
+const About: React.FC<IAbout> = ({ body, certifications, imgSrc }) => {
     return (
         <>
             <Box id='about' w='full'>
@@ -33,6 +38,29 @@ const About: React.FC<IAbout> = ({ body }) => {
                             {paragraph}
                         </Text>
                     ))}
+                    <Text color='brandOrange.300' fontSize='xl' fontWeight='semibold'>
+                        Certifications
+                    </Text>
+                    {/* {certifications.length > 0 && (
+                        <HStack>
+                            {certifications.map((item) => (
+                                <Button
+                                    color='brandOrange.300'
+                                    width='full'
+                                    fontWeight='semibold'
+                                    borderWidth={2}
+                                    borderColor='brandOrange.300'
+                                    rounded='xl'
+                                    bg='transparent'
+                                    as='a'
+                                    download={item.href}
+                                    href={item.href}
+                                >
+                                    {item.label}
+                                </Button>
+                            ))}
+                        </HStack>
+                    )} */}
                 </VStack>
                 <VStack w='full'>
                     <Box
@@ -45,7 +73,7 @@ const About: React.FC<IAbout> = ({ body }) => {
                         rounded='xl'
                     >
                         <Image
-                            src='/assets/marcusandsummit.jpg'
+                            src={imgSrc}
                             fill
                             style={{ objectFit: 'cover' }}
                             alt='Picture of marcus'
