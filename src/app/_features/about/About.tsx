@@ -38,9 +38,9 @@ const About: React.FC<IAbout> = ({ body, certifications, imgSrc }) => {
                             {paragraph}
                         </Text>
                     ))}
-                    <Text color='brandOrange.300' fontSize='xl' fontWeight='semibold'>
+                    {/* <Text color='brandOrange.300' fontSize='xl' fontWeight='semibold'>
                         Certifications
-                    </Text>
+                    </Text> */}
                     {/* {certifications.length > 0 && (
                         <HStack>
                             {certifications.map((item) => (
