@@ -23,6 +23,7 @@ const TestimonialButton = ({
             bg='brandGreen.300'
             p='2'
             isDisabled={disabled}
+            aria-label={type === 'prev' ? 'Go to previous testimonial' : 'Go to next testimonial'}
             _hover={{
                 background: 'brandGreen.300',
             }}
