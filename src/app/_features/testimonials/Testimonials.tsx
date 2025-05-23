@@ -39,6 +39,8 @@ const Testimonials: React.FC<ITestimonials> = () => {
         [activeIndex],
     )
 
+    const longString = activeItem.body.length > 500
+
     return (
         <VStack alignItems='start' display='flex' gap={{ base: 8 }} px={{ base: 2, lg: 0 }}>
             <Box display='flex' w='full' justifyContent='space-between' mb={{ base: 0, lg: 6 }}>
@@ -67,35 +69,39 @@ const Testimonials: React.FC<ITestimonials> = () => {
                 <VStack key={activeItem.body} gap={{ base: 4, lg: 8 }} position='relative' w='full'>
                     <React.Fragment key={activeItem.body}>
                         <TestimonialText>
-                            {truncatedString
+                            {truncatedString && longString
                                 ? `${activeItem.body.substring(0, 500)}...`
                                 : activeItem.body}
-                            {truncatedString ? (
-                                <Button
-                                    p={0}
-                                    bg='none'
-                                    fontWeight='bold'
-                                    border='none'
-                                    onClick={() => setTruncatedString(false)}
-                                    ml={2}
-                                    mb={0.5}
-                                    _hover={{ background: 'none' }}
-                                >
-                                    See all
-                                </Button>
+                            {longString ? (
+                                truncatedString ? (
+                                    <Button
+                                        p={0}
+                                        bg='none'
+                                        fontWeight='bold'
+                                        border='none'
+                                        onClick={() => setTruncatedString(false)}
+                                        ml={2}
+                                        mb={0.5}
+                                        _hover={{ background: 'none' }}
+                                    >
+                                        See all
+                                    </Button>
+                                ) : (
+                                    <Button
+                                        p={0}
+                                        bg='none'
+                                        fontWeight='bold'
+                                        border='none'
+                                        onClick={() => setTruncatedString(true)}
+                                        ml={2}
+                                        mb={0.5}
+                                        _hover={{ background: 'none' }}
+                                    >
+                                        See less
+                                    </Button>
+                                )
                             ) : (
-                                <Button
-                                    p={0}
-                                    bg='none'
-                                    fontWeight='bold'
-                                    border='none'
-                                    onClick={() => setTruncatedString(true)}
-                                    ml={2}
-                                    mb={0.5}
-                                    _hover={{ background: 'none' }}
-                                >
-                                    See less
-                                </Button>
+                                <></>
                             )}
                         </TestimonialText>
                         <HStack>
@@ -133,8 +139,14 @@ const Testimonials: React.FC<ITestimonials> = () => {
             </Stack>
             {link && (
                 <VStack w='full'>
-                    <Button as='a' target='_blank' href={link} variant='primary'>
-                        See More
+                    <Button
+                        aria-label='View all google reviews'
+                        as='a'
+                        target='_blank'
+                        href={link}
+                        variant='primary'
+                    >
+                        See More Testimonials
                     </Button>
                 </VStack>
             )}

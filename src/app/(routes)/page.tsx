@@ -14,6 +14,7 @@ const Home = () => {
                 title={homepageConfig.hero.title}
                 subtitle={homepageConfig.hero.subtitle}
                 action={homepageConfig.hero.action}
+                imgSrc={homepageConfig.hero.imgSrc}
             />
             <Container
                 display='flex'
@@ -25,7 +26,11 @@ const Home = () => {
                 px={{ base: 6, lg: 4 }}
             >
                 <VStack gap={{ base: 4, lg: 12 }}>
-                    <About body={homepageConfig.about.body} />
+                    <About
+                        body={homepageConfig.about.body}
+                        certifications={homepageConfig.about.certs}
+                        imgSrc={homepageConfig.about.image}
+                    />
                 </VStack>
             </Container>
             <Contact />

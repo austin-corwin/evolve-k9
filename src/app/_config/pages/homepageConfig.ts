@@ -7,11 +7,16 @@ export const homepageConfig = {
             label: 'Schedule a Free Phone Consultation',
             href: '/contact',
         },
+        imgSrc: '/assets/echo-summit-hero.webp',
     },
     about: {
         body: [
             `Welcome to Evolve K9!  We are dedicated to empowering dogs to make good choices for themselves. Through our training programs, we instill decision-making skills that promote independence, confidence, and a stronger connection between dogs and their owners. Recognizing the importance of a cooperative partnership, our training methods provide owners with the control needed to guide and shape their dog's behavior. `,
             `This empowerment leads to clear communication, well-defined boundaries, and a solid foundation for a harmonious relationship. We specialize in providing clients the skills and knowledge needed to live a harmonious life with their dogs. We simplify the training journey through a holistic approach that includes relationship, freedom, confidence, basic and advanced obedience, as well as targeted behavioral modification. Our team is committed to responding to your inquiries promptly and providing the information you need.`,
+        ],
+        image: '/assets/marcusandsummit-optimized.webp',
+        certs: [
+            { label: 'IACP Prong Collar Knowledge Certified', href: '/assets/docs/pcka-cert.pdf' },
         ],
     },
     contact: {
@@ -158,6 +163,36 @@ export const homepageConfig = {
         items: [
             {
                 rating: 5,
+                body: `We hired Marcus in January to help us with an extremely anxious dog. She is a rescue, and we did initial training with another company (not extensive but we learned basics for establishing trust with anxious dogs). We really wanted her to start to feel comfortable in her new environment so we held off on more training for three months, but I’m not sure that helped. By the time we reached out to Marcus, she was always glued to a corner in the house or her crate, and would not enjoy human interactions or toys.
+
+Fast forward through 8 weeks of hands-on training and this girl is confident, loves to go on walks, and cuddles on the couch. She is so much more personable than we could imagine. Marcus’s training methods were very effective and what we appreciated most, he pivoted goals based on her progress that week.
+
+I would say the at-home training program is for people dedicated to giving their dog the time and energy they deserve to help improve relationships and build the dogs confidence (if that’s what you need). We were diligent about the training process on the days between sessions which led to success. Marcus is so knowledgeable and gives you the tools to succeed so it’s not too difficult. We plan to continue our basic training for now but enroll our sweet girl in the e-collar training program soon!`,
+                author: 'Regina L.',
+            },
+            {
+                rating: 5,
+                body: `Evolve K9 training! What can I say? Absolute fantastic. Marcus is so passionate about his clients, and really getting the best training experience. Marcus had a variety of options, but before you choose he will come to your home, meet your pup, and really take his time. Our dog Buella adores Marlus and is always so happy to train!`,
+                author: 'Mary O.',
+            },
+            {
+                rating: 5,
+                body: `We cannot recommend Marcus Chapman and Evolve K-9 Training enough! His patience, professionalism, and incredible ability to hold our dog’s attention are unmatched. He is thorough in every session, ensuring our pup learns and thrives, and his superlative customer service makes every interaction a pleasure. Our dog absolutely loves training and boarding with him, wagging his tail with excitement every time we arrive. We have total confidence and complete peace of mind while our dog is in his care, knowing he is in the very best of hands.
+If you want a trainer who truly cares and delivers outstanding results, look no further— Evolve K-9 Training is the best!`,
+                author: 'Brian K.',
+            },
+            {
+                rating: 5,
+                body: `I highly recommend Marcus. It was a nightmare to take my dog on walks and he had anxiety when I left him. Marcus was wonderful working with Baxter and now we can enjoy walks and his anxiety is much better. Thank you so much Marcus!`,
+                author: 'Debbie B.',
+            },
+            {
+                rating: 5,
+                body: `Marcus is the absolute best! His attention to detail, thoroughness, and personalized care and support he provides the doggos and their humans is on a whole other level. We highly, highly recommend him!`,
+                author: 'Arnold C.',
+            },
+            {
+                rating: 5,
                 body: `Working with Marcus has been the best dog training experience we have ever had!
 
 Our dog Lily, who we adopted as a 2.5 year old, has had anxiety and fear towards humans since we got her. As she has gotten older, her reactivity worsened and culminated to multiple bite attempts. After researching multiple dog training companies, we came across Marcus. From the beginning, Marcus was kind, professional, and showed full faith in being able to work with us on this horrible situation!
@@ -205,6 +240,10 @@ Marcus is just the best—kind, knowledgeable, and so easy to work with. If you�
     },
     trustedBrands: {
         title: 'Trusted Partners',
-        logos: ['/assets/ecollarDealer.jpg', '/assets/IACP-logo-cropped.png'],
+        logos: [
+            '/assets/ecollarDealer.jpg',
+            '/assets/IACP-logo-cropped.png',
+            '/assets/maddog-logo.png',
+        ],
     },
 }

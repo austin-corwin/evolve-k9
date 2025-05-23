@@ -8,13 +8,14 @@ interface IHero {
         label: string
         href: string
     }
+    imgSrc: string
 }
 
-const Hero: React.FC<IHero> = ({ title, subtitle, action = null }) => {
+const Hero: React.FC<IHero> = ({ title, subtitle, action = null, imgSrc }) => {
     return (
         <Box h='full'>
             <Flex
-                bgImg='/assets/echo-summit-hero.jpg'
+                bgImg={imgSrc}
                 bgColor='rgb(51, 51, 51, 0.5)'
                 bgPosition='center'
                 bgSize='cover'
