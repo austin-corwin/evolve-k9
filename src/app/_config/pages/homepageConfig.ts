@@ -21,7 +21,7 @@ export const homepageConfig = {
     },
     contact: {
         title: 'Reach out and take the first step towards empowering your dog to make better decisions for themselves! ',
-        subtitle: `Leave us your information by completing the form below and we'll reach out to schedule a phone call consultation within 48 hours. Our team is committed to responding to your inquiries promptly and providing the information you need. For direct assistance, please call us at (970) 235-8466. We're available during business hours to address your questions and concerns.`,
+        subtitle: `Leave us your information by completing the form below and we'll reach out to schedule a phone call consultation within 48 hours. Our team is committed to responding to your inquiries promptly and providing the information you need. For direct assistance, please call us at (970) 235-8466. We're available during business hours to address your questions and concerns. Please note that any inquiries submitted outside of business hours (Sunday-Monday) will be responded to on the next business day (Tuesday).`,
         body: [
             // {
             //     title: 'Contact Evolve K9 LLC – Where we empower clients to train like the pros! ',
@@ -161,6 +161,56 @@ export const homepageConfig = {
         title: 'Testimonials',
         link: 'https://www.google.com/search?q=evolve+k9+training&oq=evolve+k9+training&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgYIARBFGDwyBggCEEUYPTIGCAMQRRg80gEIMjY1M2owajGoAgCwAgA&sourceid=chrome&ie=UTF-8#lrd=0x885fd4dcc9a9c63f:0x8e83b8c925cff196,1,,,,',
         items: [
+            {
+                rating: 5,
+                body: `EvolveK9 is so so amazing!
+
+My recently adopted adult rescue struggled with fence fighting, reactivity, getting along with our resident cat and was a runner.
+
+Marcus has incredible knowledge, patience, and care when training. It was amazing to see how he personalizes his knowledge to each dog and provides great personalized resources throughout. As many are, I was protective and nervous to trust someone with Penny. From the beginning, I could trust that he was just as big of an advocate for Penny as I am! He ensured I always felt confident in my understanding of the entire process and was very supportive when I had many questions. He was always so present and kind.
+
+Our journey with Marcus has been one of the most rewarding experiences. Each walk used to make me nervous, constantly on edge about what dogs could be around the corner. Now, my friends can walk her without any issue! In the backyard, she remains calm and unbothered while neighbor dogs are barking. And we have movie nights with both Penny and Monty (resident cat) in one room.
+
+In the first few weeks of having Penny, she ran out of the door twice, both times took a village to get her back and she almost got hit by cars in the process. Now, I trust her off-leash and feel safe when the front door is open!
+
+I am so grateful I found Marcus. I was worried I could never feel safe without Penny on a leash again (backyard included). Now, thanks to Marcus and the E-collar training, Penny and I are much more fulfilled, happier, and safe!`,
+                author: 'Marissa K.',
+            },
+            {
+                rating: 5,
+                body: `We contacted Evolve K9 to see if Marcus could help us out.
+Our cooper was having some behavioral issues. A lot came from having seizures.
+Marcus gave us the reassurance that he could help with Cooper. One thing we love about Marcus is he will always tell you exactly what to expect. He worked with Cooper and us with the most respect. His knowledge with behavior issues as well as training in general is superb!!
+Coopers behavior has changed so much. Our veterinarian and the staff were really impressed by how much Cooper became so calm.
+We have referred friends to Evolve K9.
+When we get another puppy my first call will be to Evolve K9.
+Thank you Marcus for everything you have done for us!!
+`,
+                author: 'Karen S.',
+            },
+            {
+                rating: 5,
+                body: `Marcus at Evolve K9 has been amazing! He is incredibly knowledgeable and so great to work with. I’d recommend him to anyone, and have a friend that saw how different our dog was from training with Marcus so she’s working with him now too!
+
+I adopted my rescue dog in 2021 and took a training class with Marcus early on that helped lessen her aggression and reactivity. We’ve also now done the Evolved E-Collar training so she can reliably roam our partially-fence yard off-leash and that experience was also great.
+
+Mia was a very fearful and reactive dog when I first got her. We had a long break between trainings with Marcus in-person, but he has always been willing to answer questions and follow-up between classes. Marcus gave us great info about setting Mia up for our first private lesson so she’d be more comfortable with him coming to our house and making sure that we were not worried about her being rude or aggressive towards him, though that was pretty short-lived and she didn’t mind his visit at all after a few lessons one-on-one.
+
+I was initially hesitant to use an E-collar since Mia was so fearful when I first got her, but Marcus is very diligent about teaching us to condition her to the collar properly and using it in as much of a non-aversive way as possible. Mia loves her freedom now and puts her head through the E-collar herself, so she clearly is not fearful of it!
+
+We are very grateful for Marcus’ help – Mia lives a much calmer, happier, and freer life than I thought would be possible.`,
+                author: 'Kathy C.',
+            },
+            {
+                rating: 5,
+                body: `We could not be happier from our time with Marcus. We adopted a rescue on a bit of a whim and could not train him on even basics. We tried all the conventional methods we knew from having other dogs, a shelter behaviorist, and a group class and couldn’t even get him to sit. When we decided to hire Marcus, our only goal was for the dog to sit and if we got that it was going to be worth it. Our first session with Marcus had him sitting. Took him 45 minutes to get it but he sat! From there his progress totally took off and he’s gone from half feral to our best trained dog. We were close to giving up but with Marcus he’s been completely turned around and we could not be more grateful.`,
+                author: 'Emily S.',
+            },
+            {
+                rating: 5,
+                body: `I hired Marcus in April 2024 as I had a puppy that just turned 8 months old. He helped me train my dog Koa to be my Service Dog and also get ready to take a really long trip with 8+ hour flights and 15+ hour long travel days. I am also a college student, Marcus was extremely understanding when finals week came or if I couldn't get as much training as needed done during the week. I am not able to run Koa off leash, go hiking with him and have confidence anywhere I bring Koa. Marcus is also always there for you to answer any questions or give comments on videos and all.`,
+                author: 'Jade K.',
+            },
             {
                 rating: 5,
                 body: `We hired Marcus in January to help us with an extremely anxious dog. She is a rescue, and we did initial training with another company (not extensive but we learned basics for establishing trust with anxious dogs). We really wanted her to start to feel comfortable in her new environment so we held off on more training for three months, but I’m not sure that helped. By the time we reached out to Marcus, she was always glued to a corner in the house or her crate, and would not enjoy human interactions or toys.
