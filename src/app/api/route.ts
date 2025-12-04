@@ -9,10 +9,9 @@ type SheetFormData = {
     email: string
     phone_number: string
 }
-export async function POST(req: NextRequest, res: NextResponse) {
-    if (req.method !== 'POST') {
-        return NextResponse.json({ error: 'Method not allowed' }, { status: 405 })
-    }
+
+// Next.js App Router route handlers receive only the request (and optional context) argument.
+export async function POST(req: NextRequest) {
     const body = (await req.json()) as unknown as SheetFormData
 
     try {
