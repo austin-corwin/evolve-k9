@@ -30,6 +30,8 @@ export async function POST(req: NextRequest) {
         body.area_of_interest ?? '',
         body.email ?? '',
         body.phone_number ?? '',
+        body.dogs_name ?? '',
+        body.dogs_age ?? '',
         body.additional_information ?? '',
     ]
 
@@ -49,7 +51,7 @@ export async function POST(req: NextRequest) {
         const sheets = google.sheets({ version: 'v4', auth })
         const response = await sheets.spreadsheets.values.append({
             spreadsheetId: process.env.GOOGLE_SHEET_ID,
-            range: 'A1:G1',
+            range: 'A1:I1',
             valueInputOption: 'USER_ENTERED',
             requestBody: {
                 values: [values],
