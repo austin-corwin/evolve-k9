@@ -4,15 +4,34 @@ import { NextRequest, NextResponse } from 'next/server'
 type SheetFormData = {
     first_name: string
     last_name: string
-    zip_code: number
+    zip_code?: string
     area_of_interest: string
     email: string
     phone_number: string
+    dogs_name: string
+    dogs_age: string
+    additional_information?: string
+    favoriteTreat?: string
 }
 
 // Next.js App Router route handlers receive only the request (and optional context) argument.
 export async function POST(req: NextRequest) {
     const body = (await req.json()) as unknown as SheetFormData
+
+    // Ignore submissions that look like bots (honeypot should stay empty)
+    if (body.favoriteTreat && body.favoriteTreat.trim() !== '') {
+        return NextResponse.json({ success: true, skipped: true })
+    }
+
+    const values = [
+        body.first_name ?? '',
+        body.last_name ?? '',
+        body.zip_code ?? '',
+        body.area_of_interest ?? '',
+        body.email ?? '',
+        body.phone_number ?? '',
+        body.additional_information ?? '',
+    ]
 
     try {
         // Prepare google auth
@@ -33,7 +52,7 @@ export async function POST(req: NextRequest) {
             range: 'A1:G1',
             valueInputOption: 'USER_ENTERED',
             requestBody: {
-                values: [Object.values(body)],
+                values: [values],
             },
         })
         return NextResponse.json({ success: true, response, body: { data: response.data } })
