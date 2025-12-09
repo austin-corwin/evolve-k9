@@ -18,7 +18,7 @@ import Image from 'next/image'
 import React from 'react'
 
 const ContactForm: React.FC = () => {
-    const { formFields } = homepageConfig.contact
+    const { formFields, favoriteTreat } = homepageConfig.contact
     const [loading, setLoading] = React.useState(false)
     const addToast = useToast({
         position: 'bottom',
@@ -75,6 +75,18 @@ const ContactForm: React.FC = () => {
                         </Stack>
                     )
                 })}
+                {favoriteTreat?.name && (
+                    <Box position='absolute' left='-9999px' aria-hidden tabIndex={-1}>
+                        <Input
+                            type='text'
+                            name={favoriteTreat.name}
+                            autoComplete='off'
+                            tabIndex={-1}
+                            defaultValue=''
+                            aria-label={favoriteTreat.label || 'Leave this field empty'}
+                        />
+                    </Box>
+                )}
                 <Button
                     mt={2}
                     type='submit'
